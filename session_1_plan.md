@@ -1,4 +1,6 @@
-# 📝 Lesson 1 Plan 
+# 📝 Lesson 1
+
+## What was covered
 
 1. Created a GitHub Pages repository with a README and showed it live.
 2. Cloned the repository (set up with SSH).
@@ -17,10 +19,33 @@
 15. In Developer Tools, showed the body element. Showed how to access the body element in the console using JS, how to access `classList`, and how to add and remove elements.
 16. Explained that we would now do this in our code. Switched back to the code and added the class value `dark-mode` to the body element, showed how to add/remove the value using JavaScript, and inspected the DOM
 
+## Flow Diagrams
+
+```mermaid
+flowchart TD
+    A[User Requests Web Page] --> B[Browser Downloads HTML]
+    B --> C[HTML Parsing]
+    C --> D[DOM Tree Created]
+    B --> E[Browser Finds CSS & JS References]
+    E --> F[Downloads CSS Files]
+    E --> G[Downloads JS Files]
+    F --> H[CSS Parsing]
+    H --> I[CSSOM Tree Created]
+    G --> J[JS Parsing & Execution]
+    D & I --> K[Render Tree Construction]
+    K --> L["Layout (Calculate Positions & Sizes)"]
+    L --> M["Painting (Draw Pixels to Screen)"]
+    
+```
+**Figure 2:** Flow diagram showing how a browser renders a webpage
+
 ## 🤔 Skill building challenges that could be attempted before next session
 
-1. You could add side margins to the document
-2. You could choose font and set it for the document
-3. You could add emojis to the start of each section heading
-3. You could continue with the projects section - use flex styling to format a title, brief description and link.
-4. For each project link, you could add a placeholder HTML page that just shows a title and make it so that when thel ink is clicked the new page is loaded.
+1. You could add side margins to the document [margin docs](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+2. You could choose font and set it for the document [font-family docs]( https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+3. You could add emojis to the start of each section heading: [browse emojis](https://getemoji.com/)
+3. You could continue with the projects section - use flex styling to format a title, brief description and link. [Guide to flex styling](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+4. For each project link, you could add a placeholder HTML page that just shows a title and make it so that when the link is clicked the new page is loaded. [a element docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a)
+
+
+
