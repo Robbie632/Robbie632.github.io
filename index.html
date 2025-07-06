@@ -1,26 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        color: #333;
-        text-align: center;
-        padding: 50px;
-      }
-      h1 {
-        color: #4caf50;
-      }
-    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div style="height: 20px"></div>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <img
+        id="profile-image"
+        src="profile.jpg"
+        alt="profile avatar of website author"
+      />
+      <div style="display:flex; flex-direction: row;">
+        <nav>
+          <a href="#about">About</a><a href="#skills">Skills</a
+          ><a href="#projects">Projects</a>
+        </nav>
+        <button style="padding:10px; display:inline-block" id="theme-toggle">Toggle Dark Mode</button>
+
+      </div>
+    </div>
+
+    <div id="about" style="height: 500px">About</div>
+    <div id="skills" style="height: 500px">Skills</div>
+    <div id="projects" style="height: 500px">Projects</div>
+    <script src="dark-mode.js" defer></script>
   </body>
-  <script>
-    console.log("Hello World from JavaScript!");
-  </script>
 </html>

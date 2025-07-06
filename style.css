@@ -1,0 +1,52 @@
+:root {
+  /* Light mode colors */
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007bff;
+  --border-color: #dddddd;
+  /* ... more colors */
+}
+
+.dark-mode {
+  /* Dark mode colors */
+  --background-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --primary-color: #88c0da;
+  --border-color: #444444;
+  /* ... more colors */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Example usage */
+h1 {
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(
+    --background-color
+  ); /* Text color should contrast with button background */
+  border: 1px solid var(--border-color);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: end;
+}
+
+nav > a {
+  width: 100px;
+}
+
+#profile-image{
+  height:200px;
+  width:200px;
+}

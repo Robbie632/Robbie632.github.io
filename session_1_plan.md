@@ -1,0 +1,26 @@
+# 📝 Lesson 1 Plan 
+
+1. Created a GitHub Pages repository with a README and showed it live.
+2. Cloned the repository (set up with SSH).
+3. Deleted the README and replaced it with `index.html` (used Emmet abbreviation).
+4. Ran `git add`, `commit`, and `push`, and explained what was happening. Saw the index page.
+5. Explained that whenever you pushed, this was reflected on the website.
+6. Explained that we could learn a lot about how the front end of a website works from iterating on this.
+7. In VS Code, opened `index.html`, discussed Emmet abbreviations more, created a nav bar using Emmet (`nav>a*4`) as well as sections: About, Skills, Projects, Contact. Gave each a fixed height of 500px to show jumping to each section when clicking the nav bar.
+8. Launched in Chrome Developer Tools and showed the DOM.
+9. Went back to `index.html` and installed the Prettier extension, showed the keyboard shortcut to format.
+10. Made the nav bar nicer by styling with flex, used the opportunity to create `style.css` and talked about how CSS is used.
+11. Showed how to add a script at the bottom of the body, used `alert` and `console.log()`, discussed how the console is useful for seeing errors, and tried causing an error to see it.
+12. Moved JavaScript into its own file and imported it.
+13. Created a button called Dark Mode.
+14. On click, made an alert—did this without `defer` and explained how JS was looking for the element before it loaded, and that was why the `defer` keyword was needed.
+15. In Developer Tools, showed the body element. Showed how to access the body element in the console using JS, how to access `classList`, and how to add and remove elements.
+16. Explained that we would now do this in our code. Switched back to the code and added the class value `dark-mode` to the body element, showed how to add/remove the value using JavaScript, and inspected the DOM
+
+## 🤔 Skill building challenges that could be attempted before next session
+
+1. You could add side margins to the document
+2. You could choose font and set it for the document
+3. You could add emojis to the start of each section heading
+3. You could continue with the projects section - use flex styling to format a title, brief description and link.
+4. For each project link, you could add a placeholder HTML page that just shows a title and make it so that when thel ink is clicked the new page is loaded.
