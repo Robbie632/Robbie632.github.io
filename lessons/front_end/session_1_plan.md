@@ -17,12 +17,16 @@
 3. In VS Code, opened `index.html`, discussed Emmet abbreviations more, created a nav bar using Emmet (`nav>a*4`) as well as sections: About, Skills, Projects, Contact. Gave each a fixed height of 500px to show jumping to each section when clicking the nav bar.
 4.   Went back to `index.html` and installed the Prettier extension, showed the keyboard shortcut to format.
 5.  Discussed flex styling , shwowing example html file. Made the nav bar nicer by styling with flex, used the opportunity to create `style.css` and talked about how CSS is used.
-6.  Showed how to add a script at the bottom of the body, used `alert` and `console.log()`, discussed how the console is useful for seeing errors, and tried causing an error to see it.
-7.  Moved JavaScript into its own file and imported it.
-8.  Created a button called Dark Mode.
-9.  On click, made an alert—did this without `defer` and explained how JS was looking for the element before it loaded, and that was why the `defer` keyword was needed.
-10. In Developer Tools, showed the body element. Showed how to access the body element in the console using JS, how to access `classList`, and how to add and remove elements.
-11. Explained that we would now do this in our code. Switched back to the code and added the class value `dark-mode` to the body element, showed how to add/remove the value using JavaScript, and inspected the DOM
+
+## Lesson 3
+TODO: think about how this lesson could be structured and what prep student can do, cheat sheet beforehand ie basic index + js example I could send with some optional practise before hand and some basic styling imported that student could then improve, ask to use flex box, ask to do some things woth javascript for example.
+
+1. Showed how to add a script at the bottom of the body, used `alert` and `console.log()`, discussed how the console is useful for seeing errors, and tried causing an error to see it.
+2.  Moved JavaScript into its own file and imported it.
+3.  Created a button called Dark Mode.
+4.  On click, made an alert—did this without `defer` and explained how JS was looking for the element before it loaded, and that was why the `defer` keyword was needed.
+5.  In Developer Tools, showed the body element. Showed how to access the body element in the console using JS, how to access `classList`, and how to add and remove elements.
+6.  Explained that we would now do this in our code. Switched back to the code and added the class value `dark-mode` to the body element, showed how to add/remove the value using JavaScript, and inspected the DOM
 
 ## Flow Diagrams
 
