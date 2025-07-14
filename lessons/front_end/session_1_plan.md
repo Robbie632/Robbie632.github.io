@@ -1,6 +1,6 @@
-# 📝 Lesson 1
+# Lesson
 
-## What was covered
+## 📝 Lesson 1
 
 1. Created a GitHub Pages repository with a README and showed it live.
 2. Cloned the repository (set up with SSH).
@@ -8,16 +8,21 @@
 4. Ran `git add`, `commit`, and `push`, and explained what was happening. Saw the index page.
 5. Explained that whenever you pushed, this was reflected on the website.
 6. Explained that we could learn a lot about how the front end of a website works from iterating on this.
-7. In VS Code, opened `index.html`, discussed Emmet abbreviations more, created a nav bar using Emmet (`nav>a*4`) as well as sections: About, Skills, Projects, Contact. Gave each a fixed height of 500px to show jumping to each section when clicking the nav bar.
-8. Launched in Chrome Developer Tools and showed the DOM.
-9. Went back to `index.html` and installed the Prettier extension, showed the keyboard shortcut to format.
-10. Made the nav bar nicer by styling with flex, used the opportunity to create `style.css` and talked about how CSS is used.
-11. Showed how to add a script at the bottom of the body, used `alert` and `console.log()`, discussed how the console is useful for seeing errors, and tried causing an error to see it.
-12. Moved JavaScript into its own file and imported it.
-13. Created a button called Dark Mode.
-14. On click, made an alert—did this without `defer` and explained how JS was looking for the element before it loaded, and that was why the `defer` keyword was needed.
-15. In Developer Tools, showed the body element. Showed how to access the body element in the console using JS, how to access `classList`, and how to add and remove elements.
-16. Explained that we would now do this in our code. Switched back to the code and added the class value `dark-mode` to the body element, showed how to add/remove the value using JavaScript, and inspected the DOM
+7. Launched in Chrome Developer Tools and show the DOM.
+   
+
+## 📝 Lesson 2
+1. Went through any questions from last time or optional challenges
+2. Installed and set up liveshare.
+3. In VS Code, opened `index.html`, discussed Emmet abbreviations more, created a nav bar using Emmet (`nav>a*4`) as well as sections: About, Skills, Projects, Contact. Gave each a fixed height of 500px to show jumping to each section when clicking the nav bar.
+4.   Went back to `index.html` and installed the Prettier extension, showed the keyboard shortcut to format.
+5.  Discussed flex styling , shwowing example html file. Made the nav bar nicer by styling with flex, used the opportunity to create `style.css` and talked about how CSS is used.
+6.  Showed how to add a script at the bottom of the body, used `alert` and `console.log()`, discussed how the console is useful for seeing errors, and tried causing an error to see it.
+7.  Moved JavaScript into its own file and imported it.
+8.  Created a button called Dark Mode.
+9.  On click, made an alert—did this without `defer` and explained how JS was looking for the element before it loaded, and that was why the `defer` keyword was needed.
+10. In Developer Tools, showed the body element. Showed how to access the body element in the console using JS, how to access `classList`, and how to add and remove elements.
+11. Explained that we would now do this in our code. Switched back to the code and added the class value `dark-mode` to the body element, showed how to add/remove the value using JavaScript, and inspected the DOM
 
 ## Flow Diagrams
 
