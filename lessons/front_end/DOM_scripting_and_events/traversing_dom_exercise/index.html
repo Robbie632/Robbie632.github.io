@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM traversal Exercise</title>
+</head>
+
+<body>
+    <p>Try doing the following</p>
+
+    <ol>
+        <li>console.log the content of the element with id=firstElement using
+            document.getElementById</li>
+        <li>console.log the content of the element with id secondElement but by using
+            getElementByTagName</li>
+        <li>console.log the content of the element with id = thirdElement but you can only use
+            getElementByTagName and children</li>
+        <li>console.log the content of the element with class myClass, you may use getElementByClass
+        </li>
+        <li>console.log the content of the element with id fifthElement, you can only use getElementByTagName and
+            children</li>
+            <li>console.log the content of th element with id sixthElement, you must start with document.getElementById('sixthElementStartingPoint'), hint: try using parentElement</li>
+    </ol>
+    <ol>hints
+        <li>Type your DOM scripting javascript into the console panel n the developer tools</li>
+        <li>All answers begin with document</li>
+        <li>to print the content of the target use innerText property</li>
+        <li>Sometimes a method call will return a list, you can index the list using square brackets for example, if you
+            wantd to access the second element of a list myList you would run myList[1]</li>
+    </ol>
+    <div id="firstElement">
+        Congratulations, you found the first target!
+    </div>
+    <div id="secondElement">
+        Congratulations, you found the second target!
+    </div>
+
+    <ol>
+        <li>a</li>
+        <li>b</li>
+        <li id="thirdElement">Congratulations, your found the third target!</li>
+        <li>d</li>
+    </ol>
+    <div>
+        Ridiculously nested list
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>yet another list
+                <ol>
+                    <li>a</li>
+                    <li>b</li>
+                    <li id="fifthElement">Congratulations, you found the fifth target!</li>
+                </ol>
+            </li>
+            <li></li>
+        </ol>
+    </div>
+    <div class="myClass">
+        Congratulations, you found the fourth target!
+    </div>
+    <div id="sixthElement">
+        Congratulations, you found the fifth target!
+        <div>
+            <ol>
+                <li></li>
+                <li id="sixthElementStartingPoint"></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

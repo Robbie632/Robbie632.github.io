@@ -1,0 +1,30 @@
+// ================= Exercise 1: Add an "Add" Button =================
+
+// Find add button in DOM using getElementById
+// Add an event listener to the button element
+// Get the input element
+// Get the list element
+// Create a new list element and set textContent to the input
+// Append child to list item
+
+// ================= Exercise 2: Add a Delete Button =================
+
+// ================= Answers =================
+
+document.getElementById('addTodoBtn').addEventListener('click', function() {
+    const input = document.getElementById('todoInput');
+    const value = input.value.trim();
+    if (value) {
+        const li = document.createElement('li');
+        li.textContent = value;
+        document.getElementById('itemList').appendChild(li);
+        input.value = '';
+    }
+});
+
+document.getElementById('deleteTodoBtn').addEventListener('click', function() {
+    let list = document.getElementById('itemList');
+    list.lastChild.remove();
+});
+
+// ================= Exercise 3: Add "Done" Strikethrough =================
