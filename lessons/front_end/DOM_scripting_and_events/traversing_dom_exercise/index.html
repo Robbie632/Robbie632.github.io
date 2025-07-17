@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM traversal Exercise</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -22,6 +23,7 @@
         <li>console.log the content of the element with id fifthElement, you can only use getElementByTagName and
             children</li>
             <li>console.log the content of th element with id sixthElement, you must start with document.getElementById('sixthElementStartingPoint'), hint: try using parentElement</li>
+            <li>change the color of the second element with class name seventhElement to green</li>
     </ol>
     <ol>hints
         <li>Type your DOM scripting javascript into the console panel n the developer tools</li>
@@ -70,6 +72,11 @@
                 <li></li>
             </ol>
         </div>
+    </div>
+    <div>
+        <div class="seventh-element"></div>
+        <div style="color: red;" class="seventh-element">Turn this green</div>
+        <div class="seventh-element"></div>
     </div>
 </body>
 

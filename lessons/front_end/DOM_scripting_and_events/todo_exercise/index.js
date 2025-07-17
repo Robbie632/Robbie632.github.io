@@ -9,7 +9,16 @@
 
 // ================= Exercise 2: Add a Delete Button =================
 
+// Find delete button in DOM using getElementById
+// Add an event listener to the button element
+// Get the list elements
+// remove last element child
+
+
+
+
 // ================= Answers =================
+
 
 document.getElementById('addTodoBtn').addEventListener('click', function() {
     const input = document.getElementById('todoInput');
@@ -24,7 +33,7 @@ document.getElementById('addTodoBtn').addEventListener('click', function() {
 
 document.getElementById('deleteTodoBtn').addEventListener('click', function() {
     let list = document.getElementById('itemList');
-    list.lastChild.remove();
+    debugger;
+    list.lastElementChild.remove();
 });
 
-// ================= Exercise 3: Add "Done" Strikethrough =================
