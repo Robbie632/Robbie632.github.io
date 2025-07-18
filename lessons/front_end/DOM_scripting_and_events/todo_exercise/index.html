@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <title>Simple To-Do List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 2em; }
-        button { margin: 0.5em 0; }
-        #output { margin-top: 1em; color: #333; }
-        input[type="text"] { padding: 0.3em; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Simple To-Do List</h1>
-    <ol>
-        <h2>Instructions</h2>
-        <li>add item</li>
-        <li>delete item</li>
-        <li>strikethrough item and change color</li>
-    </ol>
-    <input type="text" id="todoInput" placeholder="Enter a new to-do">
-    <button id="addTodoBtn">Add</button>
-    <button id="deleteTodoBtn">Delete</button>
-    <ul id="itemList">
-        <li>Sample Item 1</li>
-        <li>Sample Item 2</li>
-    </ul>
-<script defer src="index.js"></script>
-
+    <div class="container">
+        <h1>Simple To-Do List</h1>
+        <ol>
+            <h2>Instructions</h2>
+            <li>add item</li>
+            <li>delete item</li>
+            <li>strikethrough item and change color</li>
+        </ol>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5em;">
+            <input type="text" id="todoInput" placeholder="Enter a new to-do">
+            <button id="addTodoBtn">Add</button>
+            <button id="deleteTodoBtn">Delete</button>
+        </div>
+        <ul id="itemList">
+            <li>Sample Item 1</li>
+            <li>Sample Item 2</li>
+        </ul>
+    </div>
+    <script defer src="index.js"></script>
 </body>
 </html>
