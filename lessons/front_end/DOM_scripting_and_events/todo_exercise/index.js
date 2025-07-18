@@ -33,7 +33,6 @@ document.getElementById('addTodoBtn').addEventListener('click', function() {
 
 document.getElementById('deleteTodoBtn').addEventListener('click', function() {
     let list = document.getElementById('itemList');
-    debugger;
     list.lastElementChild.remove();
 });
 

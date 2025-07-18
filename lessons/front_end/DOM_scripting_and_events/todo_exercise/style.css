@@ -35,6 +35,7 @@ h1 {
     letter-spacing: 1px;
 }
 
+
 ol {
     background: #f0f4fa;
     border-radius: 0.7em;
@@ -44,7 +45,7 @@ ol {
 
 ol h2 {
     font-size: 1.1em;
-    color: var(--accent);
+    color: var(----primary);
     margin: 0 0 0.5em 0;
 }
 
