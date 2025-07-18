@@ -1,0 +1,118 @@
+    :root {
+        --primary: #4f8cff;
+        --secondary: #f5f7fa;
+        --accent: #ffb347;
+        --success: #4caf50;
+        --danger: #e57373;
+        --text: #222;
+        --border-radius: 12px;
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background: linear-gradient(120deg, #f5f7fa 0%, #c3cfe2 100%);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 2.5rem 2rem;
+    }
+
+    h1 {
+        color: var(--primary);
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    ol {
+        background: var(--secondary);
+        border-radius: var(--border-radius);
+        padding: 1.2rem 2rem 1.2rem 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 2px 8px rgba(79, 140, 255, 0.07);
+    }
+
+    ol li {
+        margin-bottom: 0.8rem;
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    span {
+        background-color: rgb(197, 192, 192);
+        padding:0.2em;
+        border-radius: 0.5rem;
+    }
+
+    ol.hints {
+        background: #fffbe7;
+        border-left: 5px solid var(--accent);
+        margin-top: -1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .target {
+        background: var(--primary);
+        color: #fff;
+        padding: 1rem 1.5rem;
+        border-radius: var(--border-radius);
+        margin: 1.2rem 0;
+        font-size: 1.08rem;
+        box-shadow: 0 2px 8px rgba(79, 140, 255, 0.09);
+        transition: background 0.2s;
+    }
+
+    .myClass {
+        background: var(--success);
+        color: #fff;
+        font-weight: 700;
+    }
+
+    #sixth-element {
+        background: var(--success);
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .seventh-element {
+        background: #e3eafc;
+        border-radius: var(--border-radius);
+        margin: 0.5rem 0;
+        padding: 0.7rem 1rem;
+        font-size: 1rem;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .seventh-element:nth-child(2) {
+        color: #fff;
+        background: red;
+        font-weight: 700;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        main {
+            padding: 1rem 0.5rem;
+        }
+
+        ol {
+            padding: 1rem 1rem 1rem 1.5rem;
+        }
+    }

@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <button id="incrementButton"> increment counter</button>
-    <button id="decrementButton">decrement couter</button>
-    <div id="counter">0</div>
+    <title>Counter App</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-<script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="button-group">
+            <button id="incrementButton">Increment Counter</button>
+            <button id="decrementButton">Decrement Counter</button>
+        </div>
+        <div id="counter">0</div>
+        <div class="control-group">
+            <button id="startButton">Start</button>
+            <button id="pauseButton">Pause</button>
+            <button id="restartButton">Restart</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
+
 </html>
