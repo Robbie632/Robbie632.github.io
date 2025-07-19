@@ -22,20 +22,20 @@
 // ================= Answers =================
 
 // Answer 1
-document.getElementById('addTodoBtn').addEventListener('click', function() {
-    const input = document.getElementById('todoInput');
-    const value = input.value.trim();
-    if (value) {
-        const li = document.createElement('li');
-        li.textContent = value;
-        document.getElementById('itemList').appendChild(li);
-        input.value = '';
-    }
-});
+// document.getElementById('addTodoBtn').addEventListener('click', function() {
+//     const input = document.getElementById('todoInput');
+//     const value = input.value.trim();
+//     if (value) {
+//         const li = document.createElement('li');
+//         li.textContent = value;
+//         document.getElementById('itemList').appendChild(li);
+//         input.value = '';
+//     }
+// });
 
 // Answer 2
-document.getElementById('deleteTodoBtn').addEventListener('click', function() {
-    let list = document.getElementById('itemList');
-    list.lastElementChild.remove();
-});
+// document.getElementById('deleteTodoBtn').addEventListener('click', function() {
+//     let list = document.getElementById('itemList');
+//     list.lastElementChild.remove();
+// });
 

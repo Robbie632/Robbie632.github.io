@@ -1,5 +1,8 @@
-1. Go through flexbox recap exercises from previous lesson.
-2. Go through exercise traversing_dom, go through first 4 then leave the rest for student in own time
-3. Go through to_do exercise, go through first 3 exercises, then leave the rest for the student in own time
-4. Go through event_exercise, go through first 3 exercises, then leave rest for student
-5. Should now have foundation for dark mode button for portfolio, start work on this
+# Lesson Plan
+
+1. Go through any questions since last session
+2. Go through flexbox recap exercises from previous lesson.
+3. Go through exercise traversing_dom, go through first 5 then leave the rest for student in own time
+4. Go through to_do exercise, go through first two exercise, then leave the rest for the student in own time
+5. Go through event_exercise, go through first 3 exercises, then leave rest for student
+6. Should now have foundation for dark mode button for portfolio, start work on this
