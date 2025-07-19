@@ -14,12 +14,14 @@
 // Get the list elements
 // remove last element child
 
+// ================= Exercise 2: Add a ability to strike through when completed =================
 
+// add a strike
 
 
 // ================= Answers =================
 
-
+// Answer 1
 document.getElementById('addTodoBtn').addEventListener('click', function() {
     const input = document.getElementById('todoInput');
     const value = input.value.trim();
@@ -31,6 +33,7 @@ document.getElementById('addTodoBtn').addEventListener('click', function() {
     }
 });
 
+// Answer 2
 document.getElementById('deleteTodoBtn').addEventListener('click', function() {
     let list = document.getElementById('itemList');
     list.lastElementChild.remove();

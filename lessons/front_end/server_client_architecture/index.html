@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Client-Server Architecture: Browser Downloads HTML, CSS, JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
+</head>
+
+<body>
+    <h1>Client-Server Pattern: Browser Downloads HTML, CSS, and JavaScript</h1>
+    <p>
+        This page uses <a href="https://mermaid-js.github.io/mermaid/#/" target="_blank">Mermaid.js</a> to visualize how
+        a web browser (client) interacts with a web server to download HTML, CSS, and JavaScript files. HTTP status
+        codes are shown to indicate the result of each request.
+    </p>
+
+    <h2>Diagram showing how a browser loads html, javascript and html</h2>
+    <div class="mermaid-container">
+        <div class="mermaid">
+            sequenceDiagram
+            actor Browser
+            participant Server
+            Browser->>Server: GET /index.html
+            Server-->>Browser: 200 OK (HTML)
+            Browser->>Server: GET /styles.css
+            Server-->>Browser: 200 OK (CSS)
+            Browser->>Server: GET /app.js
+            Server-->>Browser: 200 OK (JavaScript)
+            Browser->>Server: GET /missing.js
+            Server-->>Browser: 404 Not Found
+        </div>
+
+
+    </div>
+
+    <h2>Status Codes Explained</h2>
+    <ul>
+        <li><strong>200 OK</strong>: The request was successful and the resource (HTML, CSS, JS) is returned.</li>
+        <li><strong>404 Not Found</strong>: The requested resource does not exist on the server.</li>
+        <li><strong>500 Internal Server Error</strong>: The server encountered an error while processing the request.
+        </li>
+    </ul>
+</body>
+
+</html>

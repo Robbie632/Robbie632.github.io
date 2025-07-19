@@ -55,9 +55,13 @@
         line-height: 1.6;
     }
 
+    #sixth-element ol li {
+        color: var(--text);
+    }
+
     span {
         background-color: rgb(197, 192, 192);
-        padding:0.2em;
+        padding: 0.2em;
         border-radius: 0.5rem;
     }
 
