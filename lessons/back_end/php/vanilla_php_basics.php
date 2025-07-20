@@ -1,6 +1,14 @@
 <?php
 
 declare(strict_types=1);
+// The above is best practise
+// if above commented out then hello(1) would run, not safe! if defined then throws error: safe!
+// hello("hello world");
+//hello(1);
+// function hello(string $a) {
+//     print($a);
+// }
+
 // ===============================
 // PHP Basics for Laravel Lesson 1 
 // ===============================
@@ -10,26 +18,64 @@ declare(strict_types=1);
 // 1. Variables and Types
 // ---------------------------------
 // var_dump useful
+// $a = 1;
+// var_dump($a);
 
 // String variable
 // string functions: https://www.php.net/manual/en/ref.strings.php
+// $myString = "holiday home";
+// var_dump($myString); 
+// $string1 = "hello ";
+// $string2 = "world\n";
+// $string3 = $string1 . $string2;
+// print($string3);
+// $shoppingList = "apples,\npears,\noranges,\nbananas\n";
+// print($shoppingList);
 
 // Integer variable
 // Math functions: https://www.php.net/manual/en/ref.math.php
-
+// $a = 1;
+// $b = 2;
+// $c = $a + $b;
+// $d = $a - $b;
+// print($c);
+// print($d);
 // Float variable
+// $a = 1.2;
+// $c = $a / 0;
+// print($c);
+// $d = $a + 'hello';
 
-// Boolean variable
 
 // arrays
 // array functions: https://www.php.net/manual/en/book.array.php
 
+// $myArray = ['Club', 'ticket', 'pub'];
+// $myEquivalentArray = [0=>'Club', 1=>'ticket', 2=>'pub'];
+// var_dump($myArray);
 // indexing arrays
+// print($myArray[2]);
+// print($myEquivalentArray[2]);
+// $myAssocarray = ['banana'=>'apple', 'pear'=>'fig'];
+// print($myAssocarray['pear']);
+// nested associative array
+// $myClubs = [
+//     ['location'=>'Bristol', 'capacity'=>1000],
+//     ['location'=>'York', 'capacity'=>2000]
+// ];
+
+
+// var_dump($myClubs['firstclub']['location']);
 
 // adding to array []
 
+// $clubs = ["Prizm", "Syndicate"];
+// $myNewClub = "pearl";
+// $clubs[] = $myNewClub;
+// var_dump($clubs);
 // removing from array unset
-
+// unset($clubs[0]);
+// var_dump($clubs);
 // associative arrays
 // example $a= ['a'=>1, 'b'=>2];
 
@@ -64,6 +110,8 @@ declare(strict_types=1);
 // ---------------------------------
 // 3. Control Flow (If, Else, Loops)
 // ---------------------------------
+
+// Boolean variable
 
 // If-elseif-else statement
 

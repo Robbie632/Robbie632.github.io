@@ -1,6 +1,19 @@
 // ================= Exercise 1: Add an "Add" Button =================
 
 // Find add button in DOM using getElementById
+
+const addButton = document.getElementById('addTodoBtn');
+const inputElement = document.getElementById('todoInput');
+
+addButton.addEventListener('click', function() {
+    
+    const newElement = document.createElement('li')
+    newElement.textContent = inputElement.value;
+    
+
+
+})
+
 // Add an event listener to the button element
 // Get the input element
 // Get the list element
