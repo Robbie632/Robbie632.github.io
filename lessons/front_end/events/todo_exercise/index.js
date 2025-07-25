@@ -22,12 +22,9 @@ const inputElement = document.getElementById('todoInput');
 
 // ================= Exercise 2: Add a ability to strike through when completed =================
 
-// add a strike
-// when adding item add event listener that listens for click
-// when clicked use e.target.classList.toggle('completed')
 
 // ================= Exercise 3: Add ability to delete specific items
-//
+
 
 
 // ================= Answers =================
@@ -39,7 +36,6 @@ document.getElementById('addTodoBtn').addEventListener('click', function() {
     if (value) {
         let li = document.createElement('li');
         li.classList.add('list-item')
-
         li.innerHTML = "<div class='item-container'><div class='item'></div><button class='deleteTodoBtn'>Delete</button></div>"
         li.querySelector(".item").textContent = value;
         document.getElementById('itemList').appendChild(li);
@@ -49,19 +45,14 @@ document.getElementById('addTodoBtn').addEventListener('click', function() {
 
 //answer 2
 document.addEventListener('click', (e) => {
-    
     if (e.target.classList.contains('item')) {
         e.target.classList.toggle('completed')
     }
 })
 
-
 // answer 3
-
 document.addEventListener('click', (event) => {
-    
-    if (event.target.classList.contains('deleteTodoBtn')) {
-        
-        event.target.closest(".item-container").remove();
+    if (event.target.classList.contains('deleteTodoBtn')) {  
+        event.target.closest("li").remove();
     }
 })
