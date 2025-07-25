@@ -78,7 +78,7 @@ button {
     box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
 }
 
-button#deleteTodoBtn {
+button.deleteTodoBtn {
     background: var(--accent);
     color: #222;
 }
@@ -87,7 +87,7 @@ button:hover {
     background: #3566b8;
 }
 
-button#deleteTodoBtn:hover {
+button.deleteTodoBtn:hover {
     background: #ff9800;
 }
 
@@ -109,8 +109,22 @@ button#deleteTodoBtn:hover {
     transition: background 0.2s, color 0.2s;
     cursor: pointer;
 }
+#itemList > li > div {
+        display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width:300px;
+}
 
 #itemList li.completed {
+    text-decoration: line-through;
+    color: var(--strike);
+    background: #e3e7ef;
+}
+
+#itemList .item.completed {
     text-decoration: line-through;
     color: var(--strike);
     background: #e3e7ef;
