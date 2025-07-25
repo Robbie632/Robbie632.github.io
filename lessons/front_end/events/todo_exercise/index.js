@@ -39,7 +39,7 @@ document.getElementById('addTodoBtn').addEventListener('click', function() {
     if (value) {
         let li = document.createElement('li');
         li.classList.add('list-item')
-        attachHandleClick(li)
+
         li.innerHTML = "<div class='item-container'><div class='item'></div><button class='deleteTodoBtn'>Delete</button></div>"
         li.querySelector(".item").textContent = value;
         document.getElementById('itemList').appendChild(li);
@@ -47,16 +47,14 @@ document.getElementById('addTodoBtn').addEventListener('click', function() {
     }
 });
 
-
-
 //answer 2
-
-function attachHandleClick(element) {
-    element.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
+    
+    if (e.target.classList.contains('item')) {
         e.target.classList.toggle('completed')
-    })
+    }
+})
 
-}
 
 // answer 3
 
