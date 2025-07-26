@@ -1,73 +1,82 @@
-import { useState } from 'react'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
-  // create state for items list
-    // should include value, whether strked through or not
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = localStorage.getItem('todos');
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
+  debugger
+  const [inputValue, setInputValue] = useState('');
 
-  const orderedListStyle={
-    background: "#f0f4fa",
-    borderRadius: "0.7em",
-    padding: "1em 1.5em",
-    marginBottom: "2em"
-  }
-  const listStyle = {
-    color: "black"
-  }
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
-  const inputTextStyle = {
-        padding: "0.6em 1em",
-    border: "1.5px solid var(--primary)",
-    borderRadius: "0.5em",
-    fontSize: "1em",
-    outline: "none",
-    width: "65%",
-    transition: "border 0.2s",
-    marginRight: "0.5em"
-  }
+  const addTodo = () => {
+    if (inputValue.trim()) {
+      setTodos([...todos, { id: Date.now(), text: inputValue, completed: false }]);
+      setInputValue('');
+    }
+  };
 
-  const containerStyle = {
-    background: "var(--card)",
-    marginTop: "3em",
-    padding: "2.5em 2em 2em 2em",
-    borderRadius: "1.2em",
-    boxShadow: "0 6px 32px rgba(79, 140, 255, 0.08), 0 1.5px 6px rgba(0, 0, 0, 0.04)",
-    maxWidth: "400px",
-    width: "100",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "left"
+  const toggleComplete = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
 
-  }
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
-  const h2Styles = {
-    fontSize: "1.5em",
-    fontWeight: "bold",
-    unicodeBidi: "isolate",
-    color: "var(--primary)",
-    margin: "0 0 0.5em 0",
-  }
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      addTodo();
+    }
+  };
 
   return (
-    <>
-      <div style={containerStyle}>
-        <h1>Simple To-Do List</h1>
-        <h2 style={h2Styles}>Instructions</h2>
-        <ol style={orderedListStyle}>
-          <li style={listStyle}>add item</li>
-          <li style={listStyle}>delete item</li>
-          <li style={listStyle}>strike through item</li>
-        </ol>
+    <div className="container">
+      <h1>To-Do App</h1>
 
+      <ol>
+        <h2>Instructions:</h2>
+        <li>Type your task in the input field.</li>
+        <li>Click "Add Task" or press Enter to add the task.</li>
+        <li>Click on a task to mark it as complete/incomplete.</li>
+        <li>Click "Delete" to remove a task.</li>
+      </ol>
+
+      <div style={{ display: 'flex', marginBottom: '1.5em' }}>
         <input
-          style={inputTextStyle}
-          id="todo"
           type="text"
-          placeholder="enter a new todo"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          onKeyPress={handleKeyPress}
+          placeholder="Add a new task..."
         />
+        <button onClick={addTodo}>Add Task</button>
       </div>
-    </>
+
+      <ul id="itemList">
+        {todos.map((todo) => (
+          <li key={todo.id} className={todo.completed ? 'completed' : ''}>
+            <div style={{display: 'flex', justifyContent: 'space-between', width: '100%', alignItems: 'center'}}>
+                <span className="item" onClick={() => toggleComplete(todo.id)}>
+                {todo.text}
+                </span>
+                <button className="delete" onClick={() => deleteTodo(todo.id)}>
+                Delete
+                </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-export default App
+export default App;
