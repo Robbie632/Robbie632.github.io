@@ -4,23 +4,25 @@
 
 // ================= Exercise 3: Add ability to delete specific items
 
-//================== Exercise 4: Add ability to edit individual items 
+//================== Exercise 4: Add ability to edit individual items
 
 // ================= Answers =================
 
 // Answer 1
 document.addEventListener("click", function (e) {
-  
-    if (e.target.id == "todo") {
-    
+  if (e.target.id == "todo") {
     const inputElement = document.getElementById("todoInput");
     const value = inputElement.value.trim();
 
     if (value) {
       let li = document.createElement("li");
       li.classList.add("list-item");
-      li.innerHTML =
-        "<div class='item-container'><div class='item'></div><button class='delete'>Delete</button></div>";
+      li.innerHTML = `<div class='item-container'>
+                        <div class='item'></div>
+                        <button class='delete'>Delete</button>
+                        <button class='edit'>Edit</button>
+                      </div>`;
+
       li.querySelector(".item").textContent = value;
       document.getElementById("itemList").appendChild(li);
       inputElement.value = "";
@@ -47,6 +49,14 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("edit")) {
-    alert('edit clicked')
+    parentElement = event.target.parentNode;
+    itemElement = parentElement.querySelector(".item");
+    itemElementValue = itemElement.textContent;
+    const inputElement = document.createElement("input");
+    inputElement.value = itemElementValue;
+    itemElement.replaceWith(inputElement);
+    inputElement.focus();
+    // chnage edit button to save button
+    //
   }
 });
