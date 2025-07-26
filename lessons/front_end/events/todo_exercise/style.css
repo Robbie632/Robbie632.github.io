@@ -24,8 +24,7 @@ body {
     padding: 2.5em 2em 2em 2em;
     border-radius: 1.2em;
     box-shadow: 0 6px 32px rgba(79, 140, 255, 0.08), 0 1.5px 6px rgba(0, 0, 0, 0.04);
-    max-width: 400px;
-    width: 100%;
+    
 }
 
 h1 {
@@ -115,7 +114,6 @@ button.delete:hover {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    width:300px;
 }
 
 #itemList li.completed {
@@ -132,6 +130,11 @@ button.delete:hover {
 
 #itemList li:hover {
     background: #e3e7ef;
+}
+
+.item {
+    width:350px;
+    word-wrap: break-word;
 }
 
 @media (max-width: 500px) {
