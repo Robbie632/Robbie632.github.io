@@ -78,7 +78,7 @@ button {
     box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
 }
 
-button.deleteTodoBtn {
+button.delete {
     background: var(--accent);
     color: #222;
 }
@@ -87,7 +87,7 @@ button:hover {
     background: #3566b8;
 }
 
-button.deleteTodoBtn:hover {
+button.delete:hover {
     background: #ff9800;
 }
 
