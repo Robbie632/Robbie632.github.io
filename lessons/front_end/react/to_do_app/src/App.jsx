@@ -42,14 +42,6 @@ function App() {
     <div className="container">
       <h1>To-Do App</h1>
 
-      <ol>
-        <h2>Instructions:</h2>
-        <li>Type your task in the input field.</li>
-        <li>Click "Add Task" or press Enter to add the task.</li>
-        <li>Click on a task to mark it as complete/incomplete.</li>
-        <li>Click "Delete" to remove a task.</li>
-      </ol>
-
       <div style={{ display: 'flex', marginBottom: '1.5em' }}>
         <input
           type="text"
