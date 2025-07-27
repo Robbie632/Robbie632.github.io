@@ -157,7 +157,7 @@ for (const fruit of fruits) {
     console.log(fruit);
 }
 
-// --- SECTION 6: Array `map()` (CRUCIAL for React) ---
+// --- SECTION 6: Array `map()` and filter() (CRUCIAL for React) ---
 
 /**
  * The `map()` method creates a NEW array by calling a provided function
@@ -184,7 +184,7 @@ const users = [
 const userNames = users.map(user => user.name);
 console.log("User names (using map):", userNames); // Output: ["Alice", "Bob", "Charlie"]
 
-// When using map in React, you often return JSX (explained next!)
+// When using map in React, you often return JSX 
 // Imagine this is inside a React component's render method:
 /*
 const userListItems = users.map(user => (
@@ -195,7 +195,34 @@ const userListItems = users.map(user => (
 // userListItems would then be rendered inside a <ul> or <ol>
 */
 
-// --- SECTION 7: Objects ---
+// --- SECTION 7: Array `map()` and filter() (CRUCIAL for React) ---
+
+/**
+ * The `filter()` method creates a NEW array by calling a provided function
+ * on every element in the calling array.
+ * This is incredibly useful in React for filtering items being rendered.
+ */
+
+const tasks = ['water plants', 'hoover', 'paint wall', 'change bulb', 'plant flowers'];
+console.log("\n--- SECTION 7: Array map() ---");
+
+// Example 1: Double each number
+const plants = tasks.filter(task => task.includes('plant'));
+console.log("Original tasks:", tasks);
+console.log("plant tasks (using filter):", plants); // Output: ['water plants', 'plant flowers']
+
+// Example 2: filter an array of objects (common in React)
+const students = [
+    { id: 1, name: "Alice", age: 50 },
+    { id: 2, name: "Bob", age: 20 },
+    { id: 3, name: "Charlie", age: 68 },
+];
+
+// In React, you might use map to render a list of students:
+const olderStudents = students.filter(user => user.age > 30);
+console.log("Older students (using filter):", olderStudents); // Outputs array of two objects 
+
+// --- SECTION 8: Objects ---
 
 /**
  * Objects are collections of key-value pairs.
@@ -215,7 +242,7 @@ const person = {
     }
 };
 
-console.log("\n--- SECTION 7: Objects ---");
+console.log("\n--- SECTION 8: Objects ---");
 console.log("Person object:", person);
 
 // Accessing properties (dot notation and bracket notation)
@@ -246,16 +273,6 @@ const updatedPerson = { ...person,
 };
 console.log("Updated Person (using spread):", updatedPerson);
 
-// --- SECTION 8: Introduction to JSX (Not actual JavaScript, but how it works with React) ---
-
-/**
- * JSX stands for JavaScript XML. It is a syntax extension for JavaScript.
- * It's used with React to describe what the UI should look like.
- * While it looks like HTML, it's actually JavaScript under the hood that gets compiled.
- *
- * Browsers cannot understand JSX directly. React projects use tools (like Babel)
- * to transform JSX into regular JavaScript function calls.
- */
 
 
 // --- SECTION 9: ES6+ Features Relevant to React ---
