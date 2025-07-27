@@ -3,7 +3,7 @@
  *
  * This file aims to introduce fundamental JavaScript concepts,
  * highlighting those that are particularly important when learning React.
- * 
+ *
  * Best to run this file using a debugger and stepping through lin eby line to understand what is happening
  */
 
@@ -57,6 +57,10 @@ console.log("Type of favoriteFood:", typeof favoriteFood);
 // Arithmetic Operators: +, -, *, /, %, ++, --
 let num1 = 10;
 let num2 = 3;
+
+let num3 = "10";
+let num4 = "20";
+console.log("add strings", num3 + num4);
 console.log("\n--- SECTION 2: Arithmetic Operators ---");
 console.log("Addition (10 + 3):", num1 + num2);
 console.log("Subtraction (10 - 3):", num1 - num2);
@@ -67,11 +71,21 @@ console.log("Modulus (remainder) (10 % 3):", num1 % num2);
 // Comparison Operators: ==, ===, !=, !==, >, <, >=, <=
 // Very important for control flow!
 console.log("\n--- SECTION 2: Comparison Operators ---");
-console.log("Loose Equality (10 == '10'):", 10 == '10');   // true (compares value, coerces types)
-console.log("Strict Equality (10 === '10'):", 10 === '10'); // false (compares value AND type) - ALWAYS prefer ===
+console.log("Loose Equality (10 == '10'):", 10 == "10"); // true (compares value, coerces types)
+console.log("Strict Equality (10 === '10'):", 10 === "10"); // false (compares value AND type) - ALWAYS prefer ===
 console.log("Not Equal (10 != 5):", 10 != 5);
-console.log("Strict Not Equal (10 !== '10'):", 10 !== '10');
+console.log("Strict Not Equal (10 !== '10'):", 10 !== "10");
 console.log("Greater Than (10 > 5):", 10 > 5);
+// quiz
+// 234 == 456
+// 234 != 234
+// !(10 == 3)
+// !(!(1!=4))
+// 'hello' == 'hello'
+// 'hello ' == 'hello'
+// 'Hello' == 'hello'
+// !('Hello' == 'hello')
+// !('Hello' == 'hello') != !(true)
 
 // Logical Operators: && (AND), || (OR), ! (NOT)
 console.log("\n--- SECTION 2: Logical Operators ---");
@@ -92,11 +106,11 @@ console.log("\n--- SECTION 3: Control Flow (Conditionals) ---");
 let temperature = 25;
 
 if (temperature > 30) {
-    console.log("It's a hot day!");
+  console.log("It's a hot day!");
 } else if (temperature > 20) {
-    console.log("It's a warm day.");
+  console.log("It's a warm day.");
 } else {
-    console.log("It's a cool day.");
+  console.log("It's a cool day.");
 }
 
 // --- SECTION 4: Functions ---
@@ -108,14 +122,31 @@ if (temperature > 30) {
 
 // Function Declaration
 function greet(name) {
-    return "Hello, " + name + "!";
+  return "Hello, " + name + "!";
 }
+let myVar = greet("Sarah");
+console.log(myVar);
+
 console.log("\n--- SECTION 4: Functions ---");
 console.log(greet("Charlie"));
 
+function amIhappy(emotion) {
+  if (emotion == "happy") {
+    return true;
+  } else if (emotion == "sad") {
+    return false;
+  } else {
+    return "dont know";
+  }
+}
+
+let myEmotion = amIhappy("happy");
+
+console.log("myEmotion: ", myEmotion);
+
 // Function Expression
-const add = function(a, b) {
-    return a + b;
+const add = function (a, b) {
+  return a + b;
 };
 console.log("Sum (5 + 7):", add(5, 7));
 
@@ -125,7 +156,7 @@ const multiply = (x, y) => x * y;
 console.log("Product (4 * 6):", multiply(4, 6));
 
 const sayGoodbye = (name) => {
-    console.log(`Goodbye, ${name}!`); // Template literals (backticks) for easy string interpolation
+  console.log(`Goodbye, ${name}!`); // Template literals (backticks) for easy string interpolation
 };
 sayGoodbye("David");
 
@@ -154,7 +185,7 @@ console.log("Fruits after pop:", fruits);
 // Iterating over arrays (important for rendering lists in React)
 console.log("\n--- SECTION 5: Iterating Arrays (for...of loop) ---");
 for (const fruit of fruits) {
-    console.log(fruit);
+  console.log(fruit);
 }
 
 // --- SECTION 6: Array `map()` and filter() (CRUCIAL for React) ---
@@ -169,22 +200,22 @@ const numbers = [1, 2, 3, 4, 5];
 console.log("\n--- SECTION 6: Array map() ---");
 
 // Example 1: Double each number
-const doubledNumbers = numbers.map(number => number * 2);
+const doubledNumbers = numbers.map((number) => number * 2);
 console.log("Original numbers:", numbers);
 console.log("Doubled numbers (using map):", doubledNumbers); // Output: [2, 4, 6, 8, 10]
 
 // Example 2: Transform an array of objects (common in React)
 const users = [
-    { id: 1, name: "Alice", age: 25 },
-    { id: 2, name: "Bob", age: 30 },
-    { id: 3, name: "Charlie", age: 28 },
+  { id: 1, name: "Alice", age: 25 },
+  { id: 2, name: "Bob", age: 30 },
+  { id: 3, name: "Charlie", age: 28 },
 ];
 
 // In React, you might use map to render a list of user profiles:
-const userNames = users.map(user => user.name);
+const userNames = users.map((user) => user.name);
 console.log("User names (using map):", userNames); // Output: ["Alice", "Bob", "Charlie"]
 
-// When using map in React, you often return JSX 
+// When using map in React, you often return JSX
 // Imagine this is inside a React component's render method:
 /*
 const userListItems = users.map(user => (
@@ -203,24 +234,30 @@ const userListItems = users.map(user => (
  * This is incredibly useful in React for filtering items being rendered.
  */
 
-const tasks = ['water plants', 'hoover', 'paint wall', 'change bulb', 'plant flowers'];
+const tasks = [
+  "water plants",
+  "hoover",
+  "paint wall",
+  "change bulb",
+  "plant flowers",
+];
 console.log("\n--- SECTION 7: Array map() ---");
 
 // Example 1: Double each number
-const plants = tasks.filter(task => task.includes('plant'));
+const plants = tasks.filter((task) => task.includes("plant"));
 console.log("Original tasks:", tasks);
 console.log("plant tasks (using filter):", plants); // Output: ['water plants', 'plant flowers']
 
 // Example 2: filter an array of objects (common in React)
 const students = [
-    { id: 1, name: "Alice", age: 50 },
-    { id: 2, name: "Bob", age: 20 },
-    { id: 3, name: "Charlie", age: 68 },
+  { id: 1, name: "Alice", age: 50 },
+  { id: 2, name: "Bob", age: 20 },
+  { id: 3, name: "Charlie", age: 68 },
 ];
 
 // In React, you might use map to render a list of students:
-const olderStudents = students.filter(user => user.age > 30);
-console.log("Older students (using filter):", olderStudents); // Outputs array of two objects 
+const olderStudents = students.filter((user) => user.age > 30);
+console.log("Older students (using filter):", olderStudents); // Outputs array of two objects
 
 // --- SECTION 8: Objects ---
 
@@ -230,16 +267,16 @@ console.log("Older students (using filter):", olderStudents); // Outputs array o
  */
 
 const person = {
-    firstName: "Jane",
-    lastName: "Doe",
-    age: 28,
-    isStudent: false,
-    hobbies: ["reading", "hiking", "cooking"],
-    address: {
-        street: "123 Main St",
-        city: "Anytown",
-        zip: "12345"
-    }
+  firstName: "Jane",
+  lastName: "Doe",
+  age: 28,
+  isStudent: false,
+  hobbies: ["reading", "hiking", "cooking"],
+  address: {
+    street: "123 Main St",
+    city: "Anytown",
+    zip: "12345",
+  },
 };
 
 console.log("\n--- SECTION 8: Objects ---");
@@ -267,13 +304,8 @@ console.log("Destructured hobbies:", hobbies);
 
 // Spread Syntax (...) for Objects (ES6+)
 // Useful for copying objects or merging them.
-const updatedPerson = { ...person,
-    age: 30,
-    occupation: "Engineer"
-};
+const updatedPerson = { ...person, age: 30, occupation: "Engineer" };
 console.log("Updated Person (using spread):", updatedPerson);
-
-
 
 // --- SECTION 9: ES6+ Features Relevant to React ---
 
@@ -293,7 +325,7 @@ console.log("Ternary Operator example:", message);
 
 // Default Parameters for Functions
 function sayHello(name = "Guest") {
-    console.log(`Hello, ${name}!`);
+  console.log(`Hello, ${name}!`);
 }
 console.log("\nDefault Parameters:");
 sayHello("Eve");
