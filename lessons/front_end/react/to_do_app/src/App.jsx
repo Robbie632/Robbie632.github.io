@@ -2,16 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [todos, setTodos] = useState(() => {
-    const savedTodos = localStorage.getItem('todos');
-    return savedTodos ? JSON.parse(savedTodos) : [];
-  });
+  const [todos, setTodos] = useState([]);
   debugger
   const [inputValue, setInputValue] = useState('');
-
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
 
   const addTodo = () => {
     if (inputValue.trim()) {
@@ -47,7 +40,7 @@ function App() {
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyUp={handleKeyPress}
           placeholder="Add a new task..."
         />
         <button onClick={addTodo}>Add Task</button>
