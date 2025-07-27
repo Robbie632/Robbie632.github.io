@@ -3,6 +3,8 @@
  *
  * This file aims to introduce fundamental JavaScript concepts,
  * highlighting those that are particularly important when learning React.
+ * 
+ * Best to run this file using a debugger and stepping through lin eby line to understand what is happening
  */
 
 // --- SECTION 1: Variables and Data Types ---
@@ -255,67 +257,6 @@ console.log("Updated Person (using spread):", updatedPerson);
  * to transform JSX into regular JavaScript function calls.
  */
 
-console.log("\n--- SECTION 8: Introduction to JSX (Conceptual) ---");
-console.log("NOTE: The following is conceptual JSX. It will not run as pure JavaScript.");
-console.log("It requires a React setup to be transpiled and rendered.");
-
-/*
-// Example of JSX:
-const greetingElement = <h1>Hello, React!</h1>;
-
-// You can embed JavaScript expressions within JSX using curly braces `{}`:
-const name = "Student";
-const welcomeMessage = <p>Welcome, {name}!</p>;
-
-const isLoggedIn = true;
-const userStatus = (
-    <div>
-        {isLoggedIn ? <p>You are logged in.</p> : <button>Login</button>}
-    </div>
-);
-
-// JSX elements can be stored in variables and passed around:
-function MyComponent(props) {
-    return (
-        <div>
-            <h2>{props.title}</h2>
-            {props.children} // A common React pattern to render content passed between tags
-        </div>
-    );
-}
-
-const appContent = (
-    <MyComponent title="My First React App">
-        <p>This is some content inside the component.</p>
-        <button onClick={() => console.log("Button clicked!")}>Click Me</button>
-    </MyComponent>
-);
-
-// Array map and JSX together:
-const products = [
-    { id: 1, name: "Laptop", price: 1200 },
-    { id: 2, name: "Mouse", price: 25 },
-    { id: 3, name: "Keyboard", price: 75 },
-];
-
-const productList = (
-    <ul>
-        {products.map(product => (
-            // `key` is a special prop in React, essential for list rendering performance and correctness
-            <li key={product.id}>
-                {product.name} - £{product.price}
-            </li>
-        ))}
-    </ul>
-);
-*/
-
-console.log("\nKey JSX takeaways:");
-console.log("1. Looks like HTML, but it's JavaScript.");
-console.log("2. Allows you to write UI structure directly in JS files.");
-console.log("3. Use `{}` to embed JavaScript expressions.");
-console.log("4. Requires a build tool (like Babel) to be transformed into browser-understandable JavaScript.");
-console.log("5. Crucial for defining React components' UI.");
 
 // --- SECTION 9: ES6+ Features Relevant to React ---
 
@@ -325,7 +266,7 @@ console.log("5. Crucial for defining React components' UI.");
  * Here are a couple more.
  */
 
-console.log("\n--- SECTION 9: ES6+ Features ---");
+console.log("\n--- SECTION 8: ES6+ Features ---");
 
 // Ternary Operator (Conditional Operator)
 // A concise way to write if-else statements, often used in JSX.
@@ -342,5 +283,3 @@ sayHello("Eve");
 sayHello(); // Uses the default "Guest"
 
 // --- END OF FILE ---
-console.log("\n--- End of JavaScript Basics ---");
-console.log("Keep practicing! The best way to learn is by doing.");
