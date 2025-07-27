@@ -3,23 +3,32 @@ import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([]);
-
+  debugger
   const [inputValue, setInputValue] = useState('');
 
-
   const addTodo = () => {
-
+    if (inputValue.trim()) {
+      setTodos([...todos, { id: Date.now(), text: inputValue, completed: false }]);
+      setInputValue('');
+    }
   };
 
   const toggleComplete = (id) => {
-
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
   };
 
   const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   const handleKeyPress = (e) => {
-
+    if (e.key === 'Enter') {
+      addTodo();
+    }
   };
 
   return (
