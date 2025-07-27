@@ -11,6 +11,12 @@
 
       },
 
+    },
+    {
+      "name": "Run js file",
+      "program": "${file}",
+      "request": "launch",
+      "type": "node"
     }
   ]
 }
