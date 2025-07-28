@@ -1,27 +1,30 @@
+let dropdown = document.getElementsByTagName("select")[0];
+loadSubjects('a');
 
+dropdown.addEventListener("change", (e) => {
+  let student = e.target.value;
+  loadSubjects(student);
+});
 
-let student = document.getElementsByTagName('select')[0].value
+function loadSubjects(student) {
+  debugger
+    import(`./configs/student${student}.js`).then((module) => {
+      debugger
+    // Set progress for each module (programmatically)
+    let { subjects } = module;
+    const container = document.getElementById("modules-container");
+    container.innerHTML = null;
 
+    subjects.forEach((mod, idx) => {
+      const card = document.createElement("div");
 
-// import(`./configs/student${student}.js`);
-import modules from './configs/studenta.js';
-
-// Set progress for each module (programmatically)
-const progress = Array(modules.length).fill(50); // 50% for all
-
-const container = document.getElementById("modules-container");
-const numModules = modules.length - 1;
-const totalProgress = modules.reduce((total, current) => total + current.progress, 0);
-
-modules.forEach((mod, idx) => {
-  const card = document.createElement("div");
-
-  card.className = "card";
-  card.innerHTML = `
+      card.className = "card";
+      card.innerHTML = `
                 <div class="progress-bar-container">
-                    <div class="progress-bar" style="width: ${
-                      Math.max(mod.progress, 1)
-                    }%;"></div>
+                    <div class="progress-bar" style="width: ${Math.max(
+                      mod.progress,
+                      1
+                    )}%;"></div>
                 </div>
                 <div class="card-header">
                     ${mod.name}
@@ -36,12 +39,15 @@ modules.forEach((mod, idx) => {
                 </div>
             `;
 
-  container.appendChild(card);
-});
+      container.appendChild(card);
+    });
 
-document.addEventListener('click', function (e) {
-if (e.target.closest('.card')) {
-  const card = e.target.closest('.card');
-  card.classList.toggle("expanded")
+    document.addEventListener("click", function (e) {
+      if (e.target.closest(".card")) {
+        const card = e.target.closest(".card");
+        card.classList.toggle("expanded");
+      }
+    });
+  }).catch((e) => alert('error: '+ e));
+
 }
-})

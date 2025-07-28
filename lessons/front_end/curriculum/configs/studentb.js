@@ -5,7 +5,7 @@ const subjects = [
       "Your portfolio will be the platform by which you can show all your projects",
       "It shall be deployed using Github actions"
     ],
-    progress: 30
+    progress: 0
   },
   {
     name: "Setup",
@@ -17,7 +17,7 @@ const subjects = [
       "Install Live Share extension",
       "Introduction to developer tools"
     ],
-    progress: 95
+    progress: 0
   },
   {
     name: "HTML",
@@ -25,7 +25,7 @@ const subjects = [
       "Semantic elements- h1, h2, div, p, section, input, ul, ol",
       "Document object model (DOM)"
     ],
-    progress: 20
+    progress: 0
   },
   {
     name: "Styling",
@@ -37,7 +37,7 @@ const subjects = [
       "CSS variables",
       "Responsive design",
     ],
-    progress: 20
+    progress: 0
   },
   {
     name: "JavaScript Syntax",
@@ -58,7 +58,7 @@ const subjects = [
       "Creating and removing elements",
       "Traversing the DOM",
     ],
-    progress:90
+    progress:0
   },
   {
     name: "Events",
@@ -70,7 +70,7 @@ const subjects = [
       "Custom events",
       "Preventing default actions",
     ],
-     progress:70
+     progress:0
   },
   {
     name:"Client Side Storage",
@@ -95,7 +95,7 @@ const subjects = [
       "HTTP basics",
       "Request/response cycle",
     ],
-    progress:10
+    progress:0
   },
     {
     name: "JavaScript Syntax - Advanced",
