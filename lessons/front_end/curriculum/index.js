@@ -6,6 +6,13 @@ dropdown.addEventListener("change", (e) => {
   loadSubjects(student);
 });
 
+document.addEventListener("click", function (e) {
+  if (e.target.closest(".card")) {
+    const card = e.target.closest(".card");
+    card.classList.toggle("expanded");
+  }
+});
+
 function loadSubjects(student) {
   debugger
     import(`./configs/student${student}.js`).then((module) => {
@@ -13,7 +20,7 @@ function loadSubjects(student) {
     // Set progress for each module (programmatically)
     let { subjects } = module;
     const container = document.getElementById("modules-container");
-    container.innerHTML = null;
+    container.innerHTML = null; 
 
     subjects.forEach((mod, idx) => {
       const card = document.createElement("div");
@@ -40,13 +47,6 @@ function loadSubjects(student) {
             `;
 
       container.appendChild(card);
-    });
-
-    document.addEventListener("click", function (e) {
-      if (e.target.closest(".card")) {
-        const card = e.target.closest(".card");
-        card.classList.toggle("expanded");
-      }
     });
   }).catch((e) => alert('error: '+ e));
 
