@@ -31,7 +31,9 @@ function loadSubjects(student) {
                     <div class="progress-bar" style="width: ${Math.max(
                       mod.progress,
                       1
-                    )}%;"></div>
+                    )}%;">
+                    <div class="recommended-progress" style="width: ${mod.recommended_progress ?? 0}%; border: ${mod.recommended_progress ?? 0}"></div>
+                    </div>
                 </div>
                 <div class="card-header">
                     ${mod.name}

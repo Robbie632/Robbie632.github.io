@@ -5,7 +5,8 @@ const subjects = [
       "Your portfolio will be the platform by which you can show all your projects",
       "It shall be deployed using Github actions"
     ],
-    progress: 30
+    progress: 30,
+    recommended_progress: null
   },
   {
     name: "Setup",
@@ -17,7 +18,8 @@ const subjects = [
       "Install Live Share extension",
       "Introduction to developer tools"
     ],
-    progress: 95
+    progress: 100,
+    recommended_progress: 95
   },
   {
     name: "HTML",
@@ -25,7 +27,8 @@ const subjects = [
       "Semantic elements- h1, h2, div, p, section, input, ul, ol",
       "Document object model (DOM)"
     ],
-    progress: 20
+    progress: 70,
+    recommended_progress: 80
   },
   {
     name: "Styling",
@@ -37,7 +40,8 @@ const subjects = [
       "CSS variables",
       "Responsive design",
     ],
-    progress: 20
+    progress: 20,
+    recommended_progress: 80
   },
   {
     name: "JavaScript Syntax",
@@ -48,7 +52,8 @@ const subjects = [
       "Control Flow",
       "Control structures",
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95
   },
   {
     name: "DOM Scripting",
@@ -58,7 +63,8 @@ const subjects = [
       "Creating and removing elements",
       "Traversing the DOM",
     ],
-    progress:90
+    progress:90,
+    recommended_progress: 95
   },
   {
     name: "Events",
@@ -70,7 +76,8 @@ const subjects = [
       "Custom events",
       "Preventing default actions",
     ],
-     progress:70
+     progress:70,
+    recommended_progress: 95
   },
   {
     name:"Client Side Storage",
@@ -78,7 +85,8 @@ const subjects = [
       "Local Storage",
       "Cookies"
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 0
   },
   {
     name: "NPM and project scaffolding",
@@ -86,7 +94,8 @@ const subjects = [
       "starting projects",
       "Installing and using packages",
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95
   },
   {
     name: "Server Client Architecture",
@@ -95,7 +104,8 @@ const subjects = [
       "HTTP basics",
       "Request/response cycle",
     ],
-    progress:10
+    progress:10,
+    recommended_progress: 95
   },
     {
     name: "JavaScript Syntax - Advanced",
@@ -107,7 +117,8 @@ const subjects = [
       "destructuring",
       "async"
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95
   },
   {
     name: "API Calls",
@@ -118,7 +129,8 @@ const subjects = [
       "Error handling",
       "Parsing JSON",
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95
   },
   {
     name: "React Framework",
@@ -129,7 +141,8 @@ const subjects = [
       "states",
       "effects"
     ],
-    progress:0
+    progress:0,
+    recommended_progress: null
   },
 ];
 
