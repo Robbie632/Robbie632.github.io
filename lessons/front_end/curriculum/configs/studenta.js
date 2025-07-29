@@ -1,13 +1,4 @@
 const subjects = [
-    {
-    name: "Portfolio",
-    topics: [
-      "Your portfolio will be the platform by which you can show all your projects",
-      "It shall be deployed using Github actions"
-    ],
-    progress: 30,
-    recommended_progress: null
-  },
   {
     name: "Setup",
     topics: [
@@ -19,7 +10,18 @@ const subjects = [
       "Introduction to developer tools"
     ],
     progress: 100,
-    recommended_progress: 95
+    recommended_progress: 95,
+    prerequisites : []
+  },
+    {
+    name: "Portfolio",
+    topics: [
+      "Your portfolio will be the platform by which you can show all your projects",
+      "It shall be deployed using Github actions"
+    ],
+    progress: 30,
+    recommended_progress: null,
+    prerequisites : ['Setup']
   },
   {
     name: "HTML",
@@ -28,7 +30,8 @@ const subjects = [
       "Document object model (DOM)"
     ],
     progress: 70,
-    recommended_progress: 80
+    recommended_progress: 80,
+    prerequisites : ['Setup']
   },
   {
     name: "Styling",
@@ -41,10 +44,11 @@ const subjects = [
       "Responsive design",
     ],
     progress: 20,
-    recommended_progress: 80
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'HTML']
   },
   {
-    name: "JavaScript Syntax",
+    name: "JavaScript",
     topics: [
       "Variables & data types",
       "Functions",
@@ -53,7 +57,8 @@ const subjects = [
       "Control structures",
     ],
     progress:0,
-    recommended_progress: 95
+    recommended_progress: 95,
+    prerequisites : ['Setup']
   },
   {
     name: "DOM Scripting",
@@ -63,8 +68,9 @@ const subjects = [
       "Creating and removing elements",
       "Traversing the DOM",
     ],
-    progress:90,
-    recommended_progress: 95
+    progress:100,
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'HTML', 'JavaScript']
   },
   {
     name: "Events",
@@ -77,7 +83,8 @@ const subjects = [
       "Preventing default actions",
     ],
      progress:70,
-    recommended_progress: 95
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'HTML', 'JavaScript']
   },
   {
     name:"Client Side Storage",
@@ -86,7 +93,8 @@ const subjects = [
       "Cookies"
     ],
     progress:0,
-    recommended_progress: 0
+    recommended_progress: 0,
+    prerequisites : ['Setup', 'JavaScript']
   },
   {
     name: "NPM and project scaffolding",
@@ -95,7 +103,8 @@ const subjects = [
       "Installing and using packages",
     ],
     progress:0,
-    recommended_progress: 95
+    recommended_progress: 95,
+    prerequisites : ['Setup']
   },
   {
     name: "Server Client Architecture",
@@ -104,11 +113,12 @@ const subjects = [
       "HTTP basics",
       "Request/response cycle",
     ],
-    progress:10,
-    recommended_progress: 95
+    progress:80,
+    recommended_progress: 95,
+    prerequisites : ['Setup']
   },
     {
-    name: "JavaScript Syntax - Advanced",
+    name: "JavaScript - Advanced",
     topics: [
       "Array functions",
       "Objects",
@@ -118,7 +128,8 @@ const subjects = [
       "async"
     ],
     progress:0,
-    recommended_progress: 95
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'JavaScript']
   },
   {
     name: "API Calls",
@@ -130,7 +141,8 @@ const subjects = [
       "Parsing JSON",
     ],
     progress:0,
-    recommended_progress: 95
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'Javascript', 'Javascript - Advanced', 'Server Client Architecture', 'DOM Scripting', 'Events']
   },
   {
     name: "React Framework",
@@ -142,7 +154,8 @@ const subjects = [
       "effects"
     ],
     progress:0,
-    recommended_progress: null
+    recommended_progress: null,
+    prerequisites : ['Setup', 'HTML', 'Styling', 'Javascript', 'Javascript - Advanced', 'NPM and project scaffolding']
   },
 ];
 

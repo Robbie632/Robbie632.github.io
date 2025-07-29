@@ -35,15 +35,21 @@ function loadSubjects(student) {
                     <div class="recommended-progress" style="width: ${mod.recommended_progress ?? 0}%; border: ${mod.recommended_progress ?? 0}"></div>
                     </div>
                 </div>
-                <div class="card-header">
+                <h2 class="card-header">
                     ${mod.name}
                     <span class="expand-icon">&#9654;</span>
-                </div>
+                </h2>
                 <div class="card-content">
+                <div class="divider"></div>
+                <h3>Topics</h3>
                     <ul class="topic-list">
                         ${mod.topics
                           .map((topic) => `<li>${topic}</li>`)
                           .join("")}
+                    </ul>
+                    <h3>Prerequistites</h3>
+                    <ul class="prereq-list">
+                    ${mod.prerequisites == 0 ? "_" : mod.prerequisites.map((prereq) => `<li><span>✅</span>${prereq}</li>`).join(" ")}
                     </ul>
                 </div>
             `;

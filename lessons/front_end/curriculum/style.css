@@ -1,3 +1,6 @@
+  :root{
+    --grey: #888;
+  }
   body {
     background: #f4f6fa;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -67,11 +70,18 @@
     display: block;
   }
 
-  .topic-list {
-    margin: 0;
+  .topic-list, .prereq-list{
+    margin-top: 0;
     padding: 0 0 0 1.2rem;
+    list-style: none;
+  }
+  .topic-list {
     list-style: disc;
   }
+  li span {
+    margin-right: 15px;
+  }
+
 
   .expand-icon-base {
     position: relative;
@@ -79,7 +89,7 @@
     margin-bottom: 2rem;
 
     font-size: 1.2rem;
-    color: #888;
+    color: var(--grey);
     transition: transform 0.3s;
   }
 
@@ -88,7 +98,7 @@
     right: 1.5rem;
     top: 1.5rem;
     font-size: 1.2rem;
-    color: #888;
+    color: var(--grey);
     transition: transform 0.3s;
   }
 
@@ -102,4 +112,10 @@
     border-right: 5px solid blue;
     position: absolute;
     
+  }
+
+  .divider {
+    width: 80%;
+
+    border: 1px dashed var(--grey);
   }

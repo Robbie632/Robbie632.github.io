@@ -1,12 +1,4 @@
-const modules = [
-    {
-    name: "Portfolio",
-    topics: [
-      "Your portfolio will be the platform by which you can show all your projects",
-      "It shall be deployed using Github actions"
-    ],
-    progress: 80
-  },
+const subjects = [
   {
     name: "Setup",
     topics: [
@@ -17,7 +9,19 @@ const modules = [
       "Install Live Share extension",
       "Introduction to developer tools"
     ],
-    progress: 95
+    progress: 100,
+    recommended_progress: 95,
+    prerequisites : []
+  },
+    {
+    name: "Portfolio",
+    topics: [
+      "Your portfolio will be the platform by which you can show all your projects",
+      "It shall be deployed using Github actions"
+    ],
+    progress: 30,
+    recommended_progress: null,
+    prerequisites : ['Setup']
   },
   {
     name: "HTML",
@@ -25,7 +29,9 @@ const modules = [
       "Semantic elements- h1, h2, div, p, section, input, ul, ol",
       "Document object model (DOM)"
     ],
-    progress: 20
+    progress: 70,
+    recommended_progress: 80,
+    prerequisites : ['Setup']
   },
   {
     name: "Styling",
@@ -37,10 +43,12 @@ const modules = [
       "CSS variables",
       "Responsive design",
     ],
-    progress: 20
+    progress: 20,
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'HTML']
   },
   {
-    name: "JavaScript Syntax",
+    name: "JavaScript",
     topics: [
       "Variables & data types",
       "Functions",
@@ -48,7 +56,9 @@ const modules = [
       "Control Flow",
       "Control structures",
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95,
+    prerequisites : ['Setup']
   },
   {
     name: "DOM Scripting",
@@ -58,7 +68,9 @@ const modules = [
       "Creating and removing elements",
       "Traversing the DOM",
     ],
-    progress:0
+    progress:100,
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'HTML', 'JavaScript']
   },
   {
     name: "Events",
@@ -70,14 +82,19 @@ const modules = [
       "Custom events",
       "Preventing default actions",
     ],
-     progress:0
+     progress:70,
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'HTML', 'JavaScript']
   },
   {
     name:"Client Side Storage",
     topics: [
       "Local Storage",
       "Cookies"
-    ]
+    ],
+    progress:0,
+    recommended_progress: 0,
+    prerequisites : ['Setup', 'JavaScript']
   },
   {
     name: "NPM and project scaffolding",
@@ -85,7 +102,9 @@ const modules = [
       "starting projects",
       "Installing and using packages",
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95,
+    prerequisites : ['Setup']
   },
   {
     name: "Server Client Architecture",
@@ -94,10 +113,12 @@ const modules = [
       "HTTP basics",
       "Request/response cycle",
     ],
-    progress:15
+    progress:80,
+    recommended_progress: 95,
+    prerequisites : ['Setup']
   },
     {
-    name: "JavaScript Syntax - Advanced",
+    name: "JavaScript - Advanced",
     topics: [
       "Array functions",
       "Objects",
@@ -106,7 +127,9 @@ const modules = [
       "destructuring",
       "async"
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'JavaScript']
   },
   {
     name: "API Calls",
@@ -117,7 +140,9 @@ const modules = [
       "Error handling",
       "Parsing JSON",
     ],
-    progress:0
+    progress:0,
+    recommended_progress: 95,
+    prerequisites : ['Setup', 'Javascript', 'Javascript - Advanced', 'Server Client Architecture', 'DOM Scripting', 'Events']
   },
   {
     name: "React Framework",
@@ -128,8 +153,10 @@ const modules = [
       "states",
       "effects"
     ],
-    progress:0
+    progress:0,
+    recommended_progress: null,
+    prerequisites : ['Setup', 'HTML', 'Styling', 'Javascript', 'Javascript - Advanced', 'NPM and project scaffolding']
   },
 ];
 
-export default modules;
+export {subjects};
