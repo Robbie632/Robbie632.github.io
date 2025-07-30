@@ -1,11 +1,5 @@
-let dropdown = document.getElementsByTagName("select")[0];
-loadSubjects('a');
-
-dropdown.addEventListener("change", (e) => {
-  let student = e.target.value;
-  loadSubjects(student);
-});
-
+import {subjects} from './config';
+debugger
 document.addEventListener("click", function (e) {
   if (e.target.closest(".card")) {
     const card = e.target.closest(".card");
@@ -13,26 +7,24 @@ document.addEventListener("click", function (e) {
   }
 });
 
-function loadSubjects(student) {
-  debugger
-    import(`./configs/student${student}.js`).then((module) => {
-      debugger
-    // Set progress for each module (programmatically)
-    let { subjects } = module;
-    const container = document.getElementById("modules-container");
-    container.innerHTML = null; 
+// Set progress for each module (programmatically)
 
-    subjects.forEach((mod, idx) => {
-      const card = document.createElement("div");
+const container = document.getElementById("modules-container");
+container.innerHTML = null;
 
-      card.className = "card";
-      card.innerHTML = `
+subjects.forEach((mod, idx) => {
+  const card = document.createElement("div");
+
+  card.className = "card";
+  card.innerHTML = `
                 <div class="progress-bar-container">
                     <div class="progress-bar" style="width: ${Math.max(
                       mod.progress,
                       1
                     )}%;">
-                    <div class="recommended-progress" style="width: ${mod.recommended_progress ?? 0}%; border: ${mod.recommended_progress ?? 0}"></div>
+                    <div class="recommended-progress" style="width: ${
+                      mod.recommended_progress ?? 0
+                    }%; border: ${mod.recommended_progress ?? 0}"></div>
                     </div>
                 </div>
                 <h2 class="card-header">
@@ -49,13 +41,18 @@ function loadSubjects(student) {
                     </ul>
                     <h3>Prerequistites</h3>
                     <ul class="prereq-list">
-                    ${mod.prerequisites == 0 ? "_" : mod.prerequisites.map((prereq) => `<li><span>✅</span>${prereq}</li>`).join(" ")}
+                    ${
+                      mod.prerequisites == 0
+                        ? "_"
+                        : mod.prerequisites
+                            .map(
+                              (prereq) => `<li><span>✅</span>${prereq}</li>`
+                            )
+                            .join(" ")
+                    }
                     </ul>
                 </div>
             `;
 
-      container.appendChild(card);
-    });
-  }).catch((e) => alert('error: '+ e));
-
-}
+  container.appendChild(card);
+});
