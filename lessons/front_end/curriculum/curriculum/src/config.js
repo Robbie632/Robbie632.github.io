@@ -99,7 +99,7 @@ const subjects = [
   {
     name: "NPM and project scaffolding",
     topics: [
-      "starting projects",
+      "Starting projects",
       "Installing and using packages",
     ],
     progress:0,
@@ -123,9 +123,9 @@ const subjects = [
       "Array functions",
       "Objects",
       "arrow notation",
-      "callbacks",
-      "destructuring",
-      "async"
+      "Callbacks",
+      "Destructuring",
+      "Asynchronous calls"
     ],
     progress:0,
     recommended_progress: 95,
@@ -147,11 +147,11 @@ const subjects = [
   {
     name: "React Framework",
     topics: [
-      "project setup",
-      "rendering JSX",
-      "props",
-      "states",
-      "effects"
+      "Project setup",
+      "Rendering JSX",
+      "Props",
+      "States",
+      "Effects"
     ],
     progress:0,
     recommended_progress: null,
