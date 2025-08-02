@@ -20,7 +20,8 @@ document.addEventListener("click", function (e) {
       li.innerHTML = `<div class='item-container'>
                         <div class='item'></div>
                         <button class='delete'>Delete</button>
-                        <button class='edit'>Edit</button>
+                        <button class='edit' id='edit'>Edit</button>
+                        <button class='save' id='save'>Save</button>
                       </div>`;
 
       li.querySelector(".item").textContent = value;
@@ -56,7 +57,24 @@ document.addEventListener("click", (event) => {
     inputElement.value = itemElementValue;
     itemElement.replaceWith(inputElement);
     inputElement.focus();
-    // chnage edit button to save button
-    //
+    let saveElement = document.getElementById("save");
+    saveElement.style.display = "block";
+    event.target.style.display = "none";
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.id == "save") {
+    let saveElement = document.getElementById("save");
+    let editElement = document.getElementById("edit");
+    let parentElement = e.target.parentNode;
+    let inputElement = parentElement.getElementsByTagName("input")[0];
+    let currentValue = inputElement.value;
+    let divElement = document.createElement("div");
+    divElement.classList.add("item");
+    divElement.innerText = currentValue;
+    editElement.style.display = "block";
+    saveElement.style.display = "none";
+    inputElement.replaceWith(divElement);
   }
 });
