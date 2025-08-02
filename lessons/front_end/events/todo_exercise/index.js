@@ -20,13 +20,12 @@ document.addEventListener("click", function (e) {
       let li = document.createElement("li");
       li.classList.add("list-item");
       li.innerHTML = `<div class='item-container'>
-                        <div class='item'></div>
+                        <div class='item'>${value}</div>
                         <button class='delete'>Delete</button>
-                        <button class='edit' id='edit'>Edit</button>
-                        <button class='save' id='save'>Save</button>
+                        <button class='edit'>Edit</button>
+                        <button class='save'>Save</button>
                       </div>`;
-
-      li.querySelector(".item").textContent = value;
+                      debugger
       document.getElementById("itemList").appendChild(li);
       inputElement.value = "";
     }
@@ -51,7 +50,7 @@ document.addEventListener("click", (event) => {
 // answer 4
 
 document.addEventListener("click", (event) => {
-  if (event.target.id =='edit') {
+  if (event.target.classList.contains('edit')) {
     let parentElement = event.target.parentNode;
     let itemElement = parentElement.querySelector(".item");
     let itemElementValue = itemElement.textContent;
@@ -66,7 +65,7 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target.id == "save") {
+  if (e.target.classList.contains("save")) {
     let parentElement = e.target.parentNode;
     
     let saveElement = parentElement.getElementsByClassName("save")[0];
