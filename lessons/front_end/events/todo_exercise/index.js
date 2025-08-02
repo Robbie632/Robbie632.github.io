@@ -58,7 +58,7 @@ document.addEventListener("click", (event) => {
     inputElement.value = itemElementValue;
     itemElement.replaceWith(inputElement);
     inputElement.focus();
-    let saveElement = parentElement.getElementsByClassName("save")[0];
+    let saveElement = parentElement.querySelector(".save");
     saveElement.style.display = "block";
     event.target.style.display = "none";
   }
@@ -68,8 +68,8 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("save")) {
     let parentElement = e.target.parentNode;
     
-    let saveElement = parentElement.getElementsByClassName("save")[0];
-    let editElement = parentElement.getElementsByClassName("edit")[0];
+    let saveElement = parentElement.querySelector(".save");
+    let editElement = parentElement.querySelector(".edit");
     
     let inputElement = parentElement.getElementsByTagName("input")[0];
     let currentValue = inputElement.value;
