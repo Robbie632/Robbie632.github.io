@@ -1,10 +1,9 @@
 /**
- * JavaScript Basics for Beginners (with React Relevance)
+ * JavaScript Basics
  *
  * This file aims to introduce fundamental JavaScript concepts,
- * highlighting those that are particularly important when learning React.
  *
- * Best to run this file using a debugger and stepping through lin eby line to understand what is happening
+ * Best to run this file using a debugger and stepping through line by line to understand what is happening
  */
 
 // --- SECTION 1: Variables and Data Types ---
@@ -150,7 +149,7 @@ const add = function (a, b) {
 };
 console.log("Sum (5 + 7):", add(5, 7));
 
-// Arrow Functions (ES6+) - VERY common in React
+// Arrow Functions (ES6+)
 // Concise syntax, especially for single expressions.
 const multiply = (x, y) => x * y;
 console.log("Product (4 * 6):", multiply(4, 6));
@@ -182,18 +181,17 @@ const removedFruit = fruits.pop(); // Removes from the end
 console.log("Removed fruit:", removedFruit);
 console.log("Fruits after pop:", fruits);
 
-// Iterating over arrays (important for rendering lists in React)
+// Iterating over arrays
 console.log("\n--- SECTION 5: Iterating Arrays (for...of loop) ---");
 for (const fruit of fruits) {
   console.log(fruit);
 }
 
-// --- SECTION 6: Array `map()` and filter() (CRUCIAL for React) ---
+// --- SECTION 6: Array `map()` and filter()  ---
 
 /**
  * The `map()` method creates a NEW array by calling a provided function
  * on every element in the calling array.
- * This is incredibly useful in React for transforming data into lists of UI elements.
  */
 
 const numbers = [1, 2, 3, 4, 5];
@@ -204,34 +202,24 @@ const doubledNumbers = numbers.map((number) => number * 2);
 console.log("Original numbers:", numbers);
 console.log("Doubled numbers (using map):", doubledNumbers); // Output: [2, 4, 6, 8, 10]
 
-// Example 2: Transform an array of objects (common in React)
+// Example 2: Transform an array of objects
 const users = [
   { id: 1, name: "Alice", age: 25 },
   { id: 2, name: "Bob", age: 30 },
   { id: 3, name: "Charlie", age: 28 },
 ];
 
-// In React, you might use map to render a list of user profiles:
+
 const userNames = users.map((user) => user.name);
 console.log("User names (using map):", userNames); // Output: ["Alice", "Bob", "Charlie"]
 
-// When using map in React, you often return JSX
-// Imagine this is inside a React component's render method:
-/*
-const userListItems = users.map(user => (
-    <li key={user.id}>
-        {user.name} ({user.age})
-    </li>
-));
-// userListItems would then be rendered inside a <ul> or <ol>
-*/
 
-// --- SECTION 7: Array `map()` and filter() (CRUCIAL for React) ---
+
+// --- SECTION 7: Array `map()` and filter()  ---
 
 /**
  * The `filter()` method creates a NEW array by calling a provided function
  * on every element in the calling array.
- * This is incredibly useful in React for filtering items being rendered.
  */
 
 const tasks = [
@@ -248,14 +236,14 @@ const plants = tasks.filter((task) => task.includes("plant"));
 console.log("Original tasks:", tasks);
 console.log("plant tasks (using filter):", plants); // Output: ['water plants', 'plant flowers']
 
-// Example 2: filter an array of objects (common in React)
+// Example 2: filter an array of objects
 const students = [
   { id: 1, name: "Alice", age: 50 },
   { id: 2, name: "Bob", age: 20 },
   { id: 3, name: "Charlie", age: 68 },
 ];
 
-// In React, you might use map to render a list of students:
+
 const olderStudents = students.filter((user) => user.age > 30);
 console.log("Older students (using filter):", olderStudents); // Outputs array of two objects
 
@@ -307,10 +295,10 @@ console.log("Destructured hobbies:", hobbies);
 const updatedPerson = { ...person, age: 30, occupation: "Engineer" };
 console.log("Updated Person (using spread):", updatedPerson);
 
-// --- SECTION 9: ES6+ Features Relevant to React ---
+// --- SECTION 9: ES6+ Features  ---
 
 /**
- * Many modern JavaScript features (ES6, ES7, etc.) are heavily used in React.
+ * Many modern JavaScript features (ES6, ES7, etc.)
  * We've already seen some (arrow functions, const/let, template literals, destructuring, spread).
  * Here are a couple more.
  */

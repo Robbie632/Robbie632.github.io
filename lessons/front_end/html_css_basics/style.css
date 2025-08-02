@@ -1,16 +1,14 @@
 :root{
-    --font-light:black;
-    --font-dark: white;
-    --background-light: white;
-    --background-dark:black;
+    --backgound-color:white;
+    --font-color: black;
 }
 
 body {
-    background-color: --var(--background-light);
-    color: --var(--font-light);
+    background-color: var(--background-color);
+    color: var(--font-color);
+    transition: background-color 0.3s ease;
 }
 .dark-mode {
-    background-color: --var(--background-dark);
-    color: --var(--font-dark);
-
+    --background-color: black;
+    --font-color: white; 
 }
