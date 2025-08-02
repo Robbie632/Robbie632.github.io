@@ -6,9 +6,8 @@
 
 //================== Exercise 4: Add ability to edit individual items
 
-//================== Exercie 5: Add ability to add stars
-
 // ================= Answers =================
+
 
 // Answer 1
 document.addEventListener("click", function (e) {
@@ -23,9 +22,8 @@ document.addEventListener("click", function (e) {
                         <div class='item'>${value}</div>
                         <button class='delete'>Delete</button>
                         <button class='edit'>Edit</button>
-                        <button class='save'>Save</button>
+                        <button class='save hide-button'>Save</button>
                       </div>`;
-                      debugger
       document.getElementById("itemList").appendChild(li);
       inputElement.value = "";
     }
@@ -50,7 +48,7 @@ document.addEventListener("click", (event) => {
 // answer 4
 
 document.addEventListener("click", (event) => {
-  if (event.target.classList.contains('edit')) {
+  if (event.target.classList.contains("edit")) {
     let parentElement = event.target.parentNode;
     let itemElement = parentElement.querySelector(".item");
     let itemElementValue = itemElement.textContent;
@@ -59,27 +57,40 @@ document.addEventListener("click", (event) => {
     itemElement.replaceWith(inputElement);
     inputElement.focus();
     let saveElement = parentElement.querySelector(".save");
-    saveElement.style.display = "block";
-    event.target.style.display = "none";
+    setElementVisiility(event.target, false);
+    setElementVisiility(saveElement, true);
+
   }
 });
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("save")) {
     let parentElement = e.target.parentNode;
-    
+
     let saveElement = parentElement.querySelector(".save");
     let editElement = parentElement.querySelector(".edit");
-    
+
     let inputElement = parentElement.getElementsByTagName("input")[0];
     let currentValue = inputElement.value;
     let divElement = document.createElement("div");
     divElement.classList.add("item");
     divElement.innerText = currentValue;
-    editElement.style.display = "block";
-    saveElement.style.display = "none";
+    setElementVisiility(editElement, true);
+    setElementVisiility(saveElement, false);
+    debugger
     inputElement.replaceWith(divElement);
   }
 });
 
-// answer 5
+
+function setElementVisiility(element, display) {
+
+  if (display) {
+    element.classList.add("display-button");
+    element.classList.remove("hide-button");
+  } else if (!display) {
+    element.classList.remove("display-button");
+    element.classList.add("hide-button");
+  }
+  return element;
+}

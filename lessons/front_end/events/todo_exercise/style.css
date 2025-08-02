@@ -150,6 +150,11 @@ button.delete:hover {
     }
 }
 
-.save {
+
+
+.display-button{
+    display: block
+}
+.hide-button {
     display: none
 }
