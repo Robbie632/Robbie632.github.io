@@ -6,6 +6,8 @@
 
 //================== Exercise 4: Add ability to edit individual items
 
+//================== Exercie 5: Add ability to add stars
+
 // ================= Answers =================
 
 // Answer 1
@@ -49,15 +51,15 @@ document.addEventListener("click", (event) => {
 // answer 4
 
 document.addEventListener("click", (event) => {
-  if (event.target.classList.contains("edit")) {
-    parentElement = event.target.parentNode;
-    itemElement = parentElement.querySelector(".item");
-    itemElementValue = itemElement.textContent;
+  if (event.target.id =='edit') {
+    let parentElement = event.target.parentNode;
+    let itemElement = parentElement.querySelector(".item");
+    let itemElementValue = itemElement.textContent;
     const inputElement = document.createElement("input");
     inputElement.value = itemElementValue;
     itemElement.replaceWith(inputElement);
     inputElement.focus();
-    let saveElement = document.getElementById("save");
+    let saveElement = parentElement.getElementsByClassName("save")[0];
     saveElement.style.display = "block";
     event.target.style.display = "none";
   }
@@ -65,9 +67,11 @@ document.addEventListener("click", (event) => {
 
 document.addEventListener("click", (e) => {
   if (e.target.id == "save") {
-    let saveElement = document.getElementById("save");
-    let editElement = document.getElementById("edit");
     let parentElement = e.target.parentNode;
+    
+    let saveElement = parentElement.getElementsByClassName("save")[0];
+    let editElement = parentElement.getElementsByClassName("edit")[0];
+    
     let inputElement = parentElement.getElementsByTagName("input")[0];
     let currentValue = inputElement.value;
     let divElement = document.createElement("div");
@@ -78,3 +82,5 @@ document.addEventListener("click", (e) => {
     inputElement.replaceWith(divElement);
   }
 });
+
+// answer 5
