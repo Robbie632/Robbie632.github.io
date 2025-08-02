@@ -1,14 +1,13 @@
 :root{
     --backgound-color:white;
-    --font-color: black;
+    --font-color: rgb(35, 33, 33);
 }
-
 body {
     background-color: var(--background-color);
     color: var(--font-color);
     transition: background-color 0.3s ease;
 }
 .dark-mode {
-    --background-color: black;
+    --background-color: rgb(35, 33, 33);
     --font-color: white; 
 }
