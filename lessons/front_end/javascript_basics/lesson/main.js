@@ -1,3 +1,7 @@
+import loadQuizzes from "./quizzes.js";
+
+
+loadQuizzes();
 /**
  * JavaScript Basics
  *
@@ -12,16 +16,21 @@
  * Variables are containers for storing data values.
  * In modern JavaScript, we primarily use `let` and `const`.
  */
-
+debugger
+let variablesContainerNameElement = document.querySelector('#variables-container > #name')
 // `let`: Used for variables whose values might change.
 let userName = "Alice";
 console.log("Initial userName:", userName);
+variablesContainerNameElement.innerText = userName;
 userName = "Bob"; // We can reassign 'let' variables
 console.log("Updated userName:", userName);
+variablesContainerNameElement.innerText = userName;
 
 // `const`: Used for variables whose values should not change once assigned.
-const appName = "MyAwesomeApp";
+const appName = "🧑 My Profile";
 console.log("App Name:", appName);
+let profileHeader = document.getElementById('profile-header')
+profileHeader.innerText = appName
 // appName = "NewApp"; // This would cause an error! (TypeError: Assignment to constant variable.)
 
 /**
@@ -43,7 +52,11 @@ let favoriteFood; // Undefined (not yet assigned)
 console.log("\n--- SECTION 1: Data Types Examples ---");
 console.log("Type of userName:", typeof userName);
 console.log("Type of age:", typeof age);
+let variablesContainerAgeElement = document.querySelector('#variables-container > #age')
+variablesContainerAgeElement.innerText = age
 console.log("Type of isActive:", typeof isActive);
+let variablesContainerIsActiveElement = document.querySelector('#variables-container > #is-active')
+variablesContainerIsActiveElement.innerText = isActive
 console.log("Type of selectedColor:", typeof selectedColor); // Note: typeof null is 'object', which is a historical quirk
 console.log("Type of favoriteFood:", typeof favoriteFood);
 
@@ -53,46 +66,50 @@ console.log("Type of favoriteFood:", typeof favoriteFood);
  * Operators perform operations on values and variables.
  */
 
-// Arithmetic Operators: +, -, *, /, %, ++, --
-let num1 = 10;
-let num2 = 3;
-
-let num3 = "10";
-let num4 = "20";
-console.log("add strings", num3 + num4);
-console.log("\n--- SECTION 2: Arithmetic Operators ---");
-console.log("Addition (10 + 3):", num1 + num2);
-console.log("Subtraction (10 - 3):", num1 - num2);
-console.log("Multiplication (10 * 3):", num1 * num2);
-console.log("Division (10 / 3):", num1 / num2);
-console.log("Modulus (remainder) (10 % 3):", num1 % num2);
-
 // Comparison Operators: ==, ===, !=, !==, >, <, >=, <=
 // Very important for control flow!
 console.log("\n--- SECTION 2: Comparison Operators ---");
-console.log("Loose Equality (10 == '10'):", 10 == "10"); // true (compares value, coerces types)
-console.log("Strict Equality (10 === '10'):", 10 === "10"); // false (compares value AND type) - ALWAYS prefer ===
-console.log("Not Equal (10 != 5):", 10 != 5);
-console.log("Strict Not Equal (10 !== '10'):", 10 !== "10");
-console.log("Greater Than (10 > 5):", 10 > 5);
-// quiz
-// 234 == 456
-// 234 != 234
-// !(10 == 3)
-// !(!(1!=4))
-// 'hello' == 'hello'
-// 'hello ' == 'hello'
-// 'Hello' == 'hello'
-// !('Hello' == 'hello')
-// !('Hello' == 'hello') != !(true)
+let firstComparison = 10 == 10;
+let firstComparisonElement = document.querySelector("#comparison-operators-container > #equal")
+firstComparisonElement.textContent = firstComparison
+
+let secondComparison = 10 != 10;
+let secondComparisonElement = document.querySelector("#comparison-operators-container > #not-equal")
+secondComparisonElement.textContent = secondComparison
+
+let thirdComparison = 10 > 5;
+let thirdComparisonElement = document.querySelector("#comparison-operators-container > #greater")
+thirdComparisonElement.textContent = thirdComparison
+
+
+let fourthComparison = 10 < 5;
+let fourthComparisonElement = document.querySelector("#comparison-operators-container > #less-than")
+fourthComparisonElement.textContent = fourthComparison
+
+
 
 // Logical Operators: && (AND), || (OR), ! (NOT)
 console.log("\n--- SECTION 2: Logical Operators ---");
+
+// --- AND Operator (&&) ---
 let isAdult = true;
 let hasLicense = false;
-console.log("isAdult && hasLicense:", isAdult && hasLicense); // true && false => false
-console.log("isAdult || hasLicense:", isAdult || hasLicense); // true || false => true
-console.log("!isAdult:", !isAdult); // !true => false
+let canDrive = isAdult && hasLicense;
+let canDriveElement = document.querySelector("#logical-operators-container > #and-operator");
+canDriveElement.textContent = canDrive;
+
+// --- OR Operator (||) ---
+let hasMoney = true;
+let hasCard = false;
+let canPay = hasMoney || hasCard;
+let canPayElement = document.querySelector("#logical-operators-container > #or-operator");
+canPayElement.textContent = canPay;
+
+// --- NOT Operator (!) ---
+let isSleeping = true;
+let isAwake = !isSleeping;
+let isAwakeElement = document.querySelector("#logical-operators-container > #not-operator");
+isAwakeElement.textContent = isAwake;
 
 // --- SECTION 3: Control Flow (Conditionals) ---
 
