@@ -1,0 +1,262 @@
+/* 
+Introduction to CSS
+===================
+
+CSS is a language for styling HTML elements using the followuing format
+
+css selector {
+    property: value
+}
+
+for example, ake the following CSS rule ...
+
+.my-card {
+    background-color: red;
+}
+
+.my-card is the css selector, this specificies what html element to style
+background-color is the property, i.e what to change
+red is thh value, this sets the style
+
+css selectors
+===================
+.my-class => css selector for elements with attribute class = my-class
+
+#my-id => css selector for elements with attribute id = my-id
+
+element-name => css selector for elements with the tag name element-name
+
+.my-class, #my-id => applies rules to elements targetted by both selectors
+
+.parent .child => css selector for an element with class 'child' that is a descendant of an element with class 'parent'
+
+.parent > .child => css selector for an element with class 'child' that is a direct child of an element with class 'parent'
+
+.my-class:hover => css selector for an element with class 'my-class' when the user hovers over it
+
+button[type="submit"] => targets a button with attribute type = submit
+
+
+Properties
+===================
+These are the style properties that can be changed, examples include color, background-color, height, width, border etc...
+
+
+Values
+===================
+These are the possible values that the properties can be styled with, acceptable values depend on the property but examples include 100px, red, justify-content.
+
+
+custom properties
+===================
+--my-var: css value ie '10px' or red etc
+background-color: var(--my-var) sets background color property to value of my-varr
+
+
+Box Model
+===================
+Every element is a rectangular box. The box model defines how an element's content, 
+padding, border, and margin are rendered. The content is the innermost part, surrounded 
+by padding, which is a transparent area that creates space between the content and the border. 
+The border wraps the padding and content, and finally, the margin is the transparent outer layer 
+that creates space between the element and other elements. The box-sizing property, when set to 
+border-box, changes the default behavior, making the width and height properties include the 
+padding and border, simplifying layout calculations.
+
+[recommended] box-sizing: border-box => width = content + padding + border
+[default]     box-sizing: content-box => width = content
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: white;
+    --font-color: rgb(35, 33, 33);
+    --border-color: rgb(75, 67, 67);
+    --color-1: rgb(190, 219, 248);
+    --color-2: rgb(87, 112, 224);
+    --input-background: rgb(233, 233, 239);
+    --button-font-color: white;
+    --card-width: 400px;
+    --margin-width: 100px;
+    --above-spacer: 4rem;
+}
+
+.dark-mode {
+    --background-color: rgb(35, 33, 33);
+    --font-color: white;
+    --border-color: rgb(138, 125, 125);
+    --color-1: rgb(69, 94, 120);
+    --input-background: rgb(70, 70, 80);
+}
+
+h1 {
+    text-align: center;
+    margin-top: calc(var(--above-spacer)*2);
+    margin-bottom: calc(var(--above-spacer));
+    font-size: 4rem;
+}
+
+h2 {
+    margin-bottom: calc(var(--above-spacer)/2);
+    margin-top: var(--above-spacer);
+    font-size: 2rem;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    transition: background-color 0.3s ease;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--color-1);
+    padding: 1.5rem;
+    padding-left: var(--margin-width);
+    padding-right: var(--margin-width);
+
+}
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    background-color: var(--color-1);
+    margin-top: 100px;
+}
+
+main {
+    margin-left: var(--margin-width);
+    margin-right: var(--margin-width);
+}
+
+h2 {
+    text-align: left;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav {
+    justify-content: end;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+footer nav {
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1rem;
+}
+
+nav>a {
+    color: var(--font-color);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav>a:hover {
+    color: rgb(143, 145, 169);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+    max-width: calc(var(--card-width)*4);
+    justify-content: center;
+    margin: auto
+}
+
+.card-container>div {
+    width: var(--card-width);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+}
+
+.center-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    min-width: 310px;
+    max-width: 700px;
+
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+form input,
+form textarea {
+    background-color: var(--input-background);
+    color: var(--font-color);
+    border-radius: 5px;
+}
+
+form input {
+    height: 2rem;
+
+}
+
+textarea {
+    height: 150px;
+    /* Sets a fixed height of 150 pixels */
+}
+
+
+input[type="submit"] {
+    background-color: var(--color-2);
+    color: var(--button-font-color);
+    height: 2.2rem;
+    border-radius: 10px;
+    width: 25%;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.dark-mode-buttons {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 10px;
+}
+
+#dark-mode-button {
+    width: 70px;
+}
+
+#dark-mode-button:hover {
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: grey;
+    border-radius: 10px;
+    /* Sets the track color */
+}

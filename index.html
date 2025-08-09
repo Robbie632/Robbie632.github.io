@@ -1,129 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Color Changer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smith's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile-style.css">
+    <script defer src="./main.js"></script>
 </head>
 
-<body>
-  <h1 class="text-4xl text-center sm:text-5xl font-bold text-gray-900 mb-10 mt-10">
-    Palette Tester
-  </h1>
-  <div class="w-9/10 m-auto">
-    <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-0">
-      Select Colors <span style='font-size:0.8em'>&#x1F58C;</span>
-    </h2>
-    <div class="flex flex-row items-center gap-2 sm:gap-5 mb-10">
-  
-          <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color1" placeholder="hexcode"
-            value="#FFEEE3" />
-          <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color2" placeholder="hexcode"
-            value="#E58945" />
-          <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color3" placeholder="hexcode"
-            value="#E5E7EB" />
-      
-    </div>
-  </div>
+<body class="dark-mode">
+    <header>
 
-  <div id="container" style='background-color:#FFEEE3'>
-    <div class="w-9/10 m-auto">
-      <div class="flex flex-col justify-center">
-        <div class="h-10"></div>
-        <div class="flex flex-col sm:flex-row items-center gap-5 w-[100%]">
-          <div class="flex flex-col flex-1/2 items-start gap-5">
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-0">
-              Hallen Marsh <span style='font-size:0.8em'>&#x1F44B;</span>
-            </h2>
-            <div class="text-gray-700 sm:text-lg">
-              Welcome to Hallen Marsh, a new wetland reserve located near the river Severn. The reserve attracts a variety of wildlife including an impressive array of wetland birds
-            </div>
+        <svg width="200" height="100" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="100" fill="#cccccc" />
 
-            <div class="text-center">
-              <button id="button-1" style="background-color: #E58945;"
-                class='block text-black-100 font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
-                type="submit">More <span>→</span></button>
-                <button id="button-1b" style="background-color: #E58945;"
-                class='mt-2 block text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
-                type="submit">More <span>→</span></button>
-            </div>
+            <line x1="0" y1="0" x2="200" y2="100" stroke="#999999" stroke-width="2" />
+            <line x1="200" y1="0" x2="0" y2="100" stroke="#999999" stroke-width="2" />
 
-          </div>
-          <div class="flex-1/2 flex flex-col items-end h-auto">
-            <img class="rounded-xl sm:w-[60%]" src='./profile.jpg'></img>
-          </div>
+        </svg>
+        <div class="dark-mode-buttons">
+            <label for="dark-mode-button">dark mode</label>
+            <input id="dark-mode-button" type="range" min="0" max=1>
+        </div>
+
+
+
+
+        <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+                href="#contact">Contact</a></nav>
+    </header>
+
+    <main>
+        <h1>Smith's Portfolio</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint quo mollitia voluptatum quidem adipisci
+            dolores cumque natus perspiciatis. Perspiciatis enim ipsam dolor vitae. Hic quia aspernatur, corrupti quam
+            dolores minima.
+
+        </p>
+        <div class="section" id="about">
+            <h2>About</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatibus iusto quas architecto ipsa
+                fuga neque excepturi accusantium ipsam minima. Tempora velit beatae adipisci placeat mollitia
+                necessitatibus ducimus excepturi quae.
+            </p>
 
         </div>
-        <div class="h-10"></div>
-      </div>
-      
-        <div id="card" style="background-color: #E5E7EB;" class="flex flex-col items-center gap-6 rounded-xl">
-          <div></div>
-          <div></div>
-          <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 mb-0 text-center">
-            Reserve management
-          </h2>
-          <div class="text-gray-700 text-center sm:max-w-/3 sm:text-lg">
-            Manging the biodiversity at the reserve
-          </div>
-          <div class="text-black-200 font-semibold text-lg">
-            <button id="button-2" style="background-color: #E58945;"
-              class='block text-black-100 font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
-              type="submit">Find out more <span>→</span></button>
-              <button id="button-2b" style="background-color: #E58945;"
-              class='mt-2 block text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
-              type="submit">Find out more <span>→</span></button>
-          </div>
-          <div>
-          </div>
-          
+        <div class="section"  id="skills">
+            <h2>Skills</h2>
+            <div class="center-block">
 
-        
-      </div>
-      <div class="h-10"></div>
+                <div class="card-container">
+                    <div class="skill">
+                        <h3>placeholder skill</h3>
+                    </div>
+                    <div class="skill">
+                        <h3>placeholder skill</h3>
+                    </div>
+                    <div class="skill">
+                        <h3>placeholder skill</h3>
+                    </div>
+                    <div class="skill">
+                        <h3>placeholder skill</h3>
+                    </div>
+                    <div class="skill">
+                        <h3>placeholder skill</h3>
+                    </div>
+                    <div class="skill">
+                        <h3>placeholder skill</h3>
+                    </div>
+                </div>
 
-
-
-    </div>
-
-  </div>
-
-</body>
-
-
-
-</div>
-
-<script>
-  const color1 = document.getElementById("color1");
-  const color2 = document.getElementById("color2");
-  const color3 = document.getElementById("color3");
-
-  const containerElement = document.getElementById("container");
-  const buttonElement = document.getElementById("button-1");
-  const buttonElementb = document.getElementById("button-1b");
-  const buttonElement2 = document.getElementById("button-2");
-  const buttonElement2b = document.getElementById("button-2b");
-  const cardElement = document.getElementById("card");
-
-  color1.addEventListener("input", () => {
-    const color = color1.value;
-    containerElement.style.backgroundColor = color;
-  });
-  color2.addEventListener("input", () => {
-    const color = color2.value;
-    buttonElement.style.backgroundColor = color;
-    buttonElementb.style.backgroundColor = color;
-    buttonElement2.style.backgroundColor = color;
-    buttonElement2b.style.backgroundColor = color;
-  });
-  color3.addEventListener("input", () => {
-    const color = color3.value;
-    cardElement.style.backgroundColor = color;
-  });
-
-</script>
+            </div>
+        </div>
+        <div class="section"  id="projects">
+            <h2>Projects</h2>
+            <div class="card-container">
+                <div>
+                    <h3>Website Color Picker</h3>
+                    <p>In this project I crteated a tool to help me pick colors for my websites</p>
+                    <a href="/website_tool/index.html">open project</a>
+                </div>
+                <div>
+                    <h3>placeholder project</h3>
+                    <p>In this project I ...</p>
+                </div>
+                <div>
+                    <h3>placeholder project</h3>
+                    <p>In this project I ...</p>
+                </div>
+                <div>
+                    <h3>placeholder project</h3>
+                    <p>In this project I ...</p>
+                </div>
+                <div>
+                    <h3>placeholder project</h3>
+                    <p>In this project I ...</p>
+                </div>
+                <div>
+                    <h3>placeholder project</h3>
+                    <p>In this project I ...</p>
+                </div>
+            </div>
+        </div>
+        <div class="section"  id="contact">
+            <h2>Contact</h2>
+            <div class="center-block">
+                <form action="">
+                    <div class="label-input">
+                        <label for="">Name</label>
+                        <input type="text">
+                    </div>
+                    <div class="label-input">
+                        <label for="">Email Address</label>
+                        <input type="email">
+                    </div>
+                    <div class="label-input">
+                        <label for="">Message</label>
+                        <textarea></textarea>
+                    </div>
+                    <input type="submit" value="Submit"></input>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+                href="#contact">Contact</a></nav>
+    </footer>
 </body>
 
 </html>
