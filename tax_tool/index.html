@@ -12,12 +12,13 @@
     <p>This tool is designed to be used by self-employed individuals in order to calculate the amount of tax they need to pay on a years profit</p>
     <form action="">
         <label for="annual-salary">Annual salary</label>
-        <input type="number" id="annual-salary">Annual salary from main job</input>
+        <input required type="number" id="annual-salary">Annual salary from main job</input>
         <label for="profit">Profit</label>
-        <input type="number" name="profit" id="profit">
+        <input required type="number" name="profit" id="profit">
         <button type="submit">calculate</button>
     </form>
     <div>tax to be paid: </div>
     <div id="calculation-output"></div>
+    <div id="explanation-output"></div>
 </body>
 </html>
