@@ -1,73 +1,3 @@
-/* 
-Introduction to CSS
-===================
-
-CSS is a language for styling HTML elements using the followuing format
-
-css selector {
-    property: value
-}
-
-for example, ake the following CSS rule ...
-
-.my-card {
-    background-color: red;
-}
-
-.my-card is the css selector, this specificies what html element to style
-background-color is the property, i.e what to change
-red is thh value, this sets the style
-
-css selectors
-===================
-.my-class => css selector for elements with attribute class = my-class
-
-#my-id => css selector for elements with attribute id = my-id
-
-element-name => css selector for elements with the tag name element-name
-
-.my-class, #my-id => applies rules to elements targetted by both selectors
-
-.parent .child => css selector for an element with class 'child' that is a descendant of an element with class 'parent'
-
-.parent > .child => css selector for an element with class 'child' that is a direct child of an element with class 'parent'
-
-.my-class:hover => css selector for an element with class 'my-class' when the user hovers over it
-
-button[type="submit"] => targets a button with attribute type = submit
-
-
-Properties
-===================
-These are the style properties that can be changed, examples include color, background-color, height, width, border etc...
-
-
-Values
-===================
-These are the possible values that the properties can be styled with, acceptable values depend on the property but examples include 100px, red, justify-content.
-
-
-custom properties
-===================
---my-var: css value ie '10px' or red etc
-background-color: var(--my-var) sets background color property to value of my-varr
-
-
-Box Model
-===================
-Every element is a rectangular box. The box model defines how an element's content, 
-padding, border, and margin are rendered. The content is the innermost part, surrounded 
-by padding, which is a transparent area that creates space between the content and the border. 
-The border wraps the padding and content, and finally, the margin is the transparent outer layer 
-that creates space between the element and other elements. The box-sizing property, when set to 
-border-box, changes the default behavior, making the width and height properties include the 
-padding and border, simplifying layout calculations.
-
-[recommended] box-sizing: border-box => width = content + padding + border
-[default]     box-sizing: content-box => width = content
-
-*/
-
 * {
     box-sizing: border-box;
 }
@@ -102,8 +32,22 @@ h1 {
 
 h2 {
     margin-bottom: calc(var(--above-spacer)/2);
-    margin-top: var(--above-spacer);
+    margin-top: calc(var(--above-spacer));
     font-size: 2rem;
+}
+
+h3 {
+    margin-bottom: calc(var(--above-spacer));
+    margin-top: var(--above-spacer);
+    margin-left: calc(var(--above-spacer)/2);
+    font-size: 1.8rem;
+
+}
+
+h4 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.2rem;
 }
 
 body {
@@ -112,6 +56,7 @@ body {
     transition: background-color 0.3s ease;
     margin: 0;
     padding: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 header {

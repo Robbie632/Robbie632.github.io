@@ -103,10 +103,10 @@ div {
   color: var(--text-color);
   width: 100%;
   max-width: 500px;
-  background: var(--card-background);
+
   padding: 1.5rem;
   border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
+
   text-align: center;
 }
 
@@ -119,7 +119,7 @@ div {
   background: none;
   box-shadow: none;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 
 #explanation-output {
