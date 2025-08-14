@@ -4,35 +4,39 @@ class TaxCalculator {
   taxRate = 0.2;
   messages = [];
 
-  constructor(annualSalary, additionalIncome) {
+  constructor(
+    annualSalary,
+    additionalIncome,
+    taxBands = [
+      { name: "personal allowance", lower: 0, upper: 12570, rate: 0 },
+      { name: "basic rate", lower: 12571, upper: 50270, rate: 0.2 },
+      { name: "higher rate", lower: 50271, upper: 125140, rate: 0.4 },
+      { name: "additional rate", lower: 125141, upper: 10000000, rate: 0.45 },
+    ]
+  ) {
     this.annualSalary = Number.parseInt(annualSalary);
     this.additionalIncome = Number.parseInt(additionalIncome);
-    this.calculateTaxRate();
-  }
-
-  calculateTaxRate() {
-    let totalIncome = this.annualSalary + this.additionalIncome;
-    this.messages.push(`total income is ${totalIncome}`)
-    if (totalIncome <= 12570) {
-        this.messages.push("total income less than 12570 so tax rate is 0")
-      this.taxRate = 0;
-    } else if (totalIncome > 12570 && totalIncome <= 50270) {
-      this.taxRate = 0.2;
-      this.messages.push("total income is between 12570 and 50270 so tax rate is 0.2")
-    } else if (totalIncome > 50270 && totalIncome <= 125140) {
-      this.taxRate = 0.4;
-      this.messages.push("total income is between 50270 and 125140 so tax rate is 0.4")
-    } else if ((totalIncome > 125140)) {
-      this.taxRate = 0.5;
-            this.messages.push("total income is above 125140 so tax rate is 0.5")
-    }
+    this.taxBands = taxBands;
   }
 
   calculateIncomeTax() {
     let taxableAdditionalIncome = Math.max(this.additionalIncome - 1000, 0);
-    this.messages.push(`taxable income is ${taxableAdditionalIncome}`)
-    let tax = taxableAdditionalIncome * this.taxRate;
-    return tax;
+    let totalIncome = this.annualSalary + taxableAdditionalIncome;
+    let totalTax = 0;
+
+    this.taxBands.forEach(({ name, lower, upper, rate }) => {
+      debugger;
+      let amountOverLower = totalIncome - lower;
+      let taxableAmountOver =
+        amountOverLower < 0 ? 0 : Math.min(amountOverLower, upper - lower);
+      let taxForband = taxableAmountOver * rate;
+      this.messages.push(
+        `paid ${Math.round(taxForband)} in tax in tax band ${name} at rate ${rate}`
+      );
+      totalTax = totalTax + taxForband;
+    });
+
+    return totalTax;
   }
 
   getMessages() {
@@ -43,7 +47,7 @@ class TaxCalculator {
 let annualSalaryInput = document.getElementById("annual-salary");
 let profitInput = document.getElementById("profit");
 let output = document.getElementById("calculation-output");
-let explanationOutput = document.getElementById("explanation-output")
+let explanationOutput = document.getElementById("explanation-output");
 
 document.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -52,16 +56,14 @@ document.addEventListener("submit", (e) => {
   let additionalIncome = profitInput.value;
   let calculator = new TaxCalculator(annualSalary, additionalIncome);
   let tax = calculator.calculateIncomeTax();
-  
-  output.innerText = tax;
-  explanationOutput.innerHTML = '';
 
-  calculator.getMessages().forEach(element => {
-    let messageOutput = document.createElement('p')
+  output.innerText = Math.round(tax);
+  explanationOutput.innerHTML = "";
+
+  calculator.getMessages().forEach((element) => {
+    let messageOutput = document.createElement("p");
     messageOutput.innerText = element;
     explanationOutput.appendChild(messageOutput);
-    
   });
   output.scrollIntoView();
-
 });
