@@ -36,10 +36,10 @@ class TaxCalculator {
       let additionalIncomeTax = taxForband * taxRatio;
       let annualSalaryTax =  taxForband - additionalIncomeTax;
       this.messages.push(
-        `paid ${Math.round(taxForband)} in tax in tax band ${name} at rate ${rate}`
+        `<p>paid ${Math.round(taxForband)} in tax in tax band <span>${name}</span> at rate ${rate}</p>`
       );
-      this.messages.push(`paid ${Math.round(additionalIncomeTax)} in tax on additional income`)
-      this.messages.push(`paid ${Math.round(annualSalaryTax)} in tax on annual salary`)
+      this.messages.push(`<p>paid ${Math.round(additionalIncomeTax)} in tax on additional income </p>`)
+      this.messages.push(`<p>paid ${Math.round(annualSalaryTax)} in tax on annual salary</p>`)
       this.messages.push("------------------")
       totalTax = totalTax + taxForband;
     });
@@ -77,7 +77,7 @@ document.addEventListener("submit", (e) => {
 
   calculator.getMessages().forEach((element) => {
     let messageOutput = document.createElement("p");
-    messageOutput.innerText = element;
+    messageOutput.innerHTML = element;
     explanationOutput.appendChild(messageOutput);
   });
   output.scrollIntoView();
