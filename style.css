@@ -13,6 +13,7 @@
     --card-width: 400px;
     --margin-width: 100px;
     --above-spacer: 4rem;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode {
@@ -21,6 +22,7 @@
     --border-color: rgb(138, 125, 125);
     --color-1: rgb(69, 94, 120);
     --input-background: rgb(70, 70, 80);
+    --box-shadow: 0 4px 6px rgba(164, 157, 157, 0.453);
 }
 
 h1 {
@@ -132,6 +134,7 @@ nav>a:hover {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    box-shadow: var(--box-shadow);
 
 }
 
