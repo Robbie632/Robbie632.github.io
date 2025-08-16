@@ -2,9 +2,10 @@
 <html>
 
 <head>
-  <title>Color Changer</title>
+  <title>Palette Tester</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer type="module" src="./main.js"></script>
 </head>
 
 <body>
@@ -16,17 +17,14 @@
       Select Colors <span style='font-size:0.8em'>&#x1F58C;</span>
     </h2>
     <div class="flex flex-row items-center gap-2 sm:gap-5 mb-10">
-  
-          <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color1" placeholder="hexcode"
-            value="#FFEEE3" />
-          <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color2" placeholder="hexcode"
-            value="#E58945" />
-          <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color3" placeholder="hexcode"
-            value="#E5E7EB" />
-      
+      <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color1" placeholder="hexcode"
+        value="#FFEEE3" />
+      <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color2" placeholder="hexcode"
+        value="#E58945" />
+      <input class="flex-1 h-20" style="cursor:pointer" type="color" id="color3" placeholder="hexcode"
+        value="#E5E7EB" />
     </div>
   </div>
-
   <div id="container" style='background-color:#FFEEE3'>
     <div class="w-9/10 m-auto">
       <div class="flex flex-col justify-center">
@@ -34,17 +32,19 @@
         <div class="flex flex-col sm:flex-row items-center gap-5 w-[100%]">
           <div class="flex flex-col flex-1/2 items-start gap-5">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-0">
-              Hallen Marsh <span style='font-size:0.8em'>&#x1F44B;</span>
+              Webpage Title <span style='font-size:0.8em'>&#x1F44B;</span>
             </h2>
             <div class="text-gray-700 sm:text-lg">
-              Welcome to Hallen Marsh, a new wetland reserve located near the river Severn. The reserve attracts a variety of wildlife including an impressive array of wetland birds
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae alias modi similique saepe, hic
+              exercitationem atque ea! Repellat dolorem minus odit nisi eligendi, quia modi dolorum culpa. Aperiam,
+              ipsam ipsa?
             </div>
 
             <div class="text-center">
               <button id="button-1" style="background-color: #E58945;"
                 class='block text-black-100 font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
                 type="submit">More <span>→</span></button>
-                <button id="button-1b" style="background-color: #E58945;"
+              <button id="button-1b" style="background-color: #E58945;"
                 class='mt-2 block text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
                 type="submit">More <span>→</span></button>
             </div>
@@ -57,73 +57,32 @@
         </div>
         <div class="h-10"></div>
       </div>
-      
-        <div id="card" style="background-color: #E5E7EB;" class="flex flex-col items-center gap-6 rounded-xl">
-          <div></div>
-          <div></div>
-          <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 mb-0 text-center">
-            Reserve management
-          </h2>
-          <div class="text-gray-700 text-center sm:max-w-/3 sm:text-lg">
-            Manging the biodiversity at the reserve
-          </div>
-          <div class="text-black-200 font-semibold text-lg">
-            <button id="button-2" style="background-color: #E58945;"
-              class='block text-black-100 font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
-              type="submit">Find out more <span>→</span></button>
-              <button id="button-2b" style="background-color: #E58945;"
-              class='mt-2 block text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
-              type="submit">Find out more <span>→</span></button>
-          </div>
-          <div>
-          </div>
-          
 
-        
+      <div id="card" style="background-color: #E5E7EB;" class="flex flex-col items-center gap-6 rounded-xl">
+        <div></div>
+        <div></div>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 mb-0 text-center">
+          Card Title
+        </h2>
+        <div class="p-5 text-gray-700 text-center sm:max-w-/3 sm:text-lg">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident qui, ullam error omnis rem nemo nostrum,
+          ipsam quibusdam sunt voluptas praesentium libero repellendus architecto cupiditate veniam iste non,
+          consequuntur temporibus!
+        </div>
+        <div class="text-black-200 font-semibold text-lg">
+          <button id="button-2" style="background-color: #E58945;"
+            class='block text-black-100 font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
+            type="submit">Find out more <span>→</span></button>
+          <button id="button-2b" style="background-color: #E58945;"
+            class='mt-2 block text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline cursor-pointer'
+            type="submit">Find out more <span>→</span></button>
+        </div>
+        <div>
+        </div>
       </div>
       <div class="h-10"></div>
-
-
-
     </div>
-
   </div>
-
-</body>
-
-
-
-</div>
-
-<script>
-  const color1 = document.getElementById("color1");
-  const color2 = document.getElementById("color2");
-  const color3 = document.getElementById("color3");
-
-  const containerElement = document.getElementById("container");
-  const buttonElement = document.getElementById("button-1");
-  const buttonElementb = document.getElementById("button-1b");
-  const buttonElement2 = document.getElementById("button-2");
-  const buttonElement2b = document.getElementById("button-2b");
-  const cardElement = document.getElementById("card");
-
-  color1.addEventListener("input", () => {
-    const color = color1.value;
-    containerElement.style.backgroundColor = color;
-  });
-  color2.addEventListener("input", () => {
-    const color = color2.value;
-    buttonElement.style.backgroundColor = color;
-    buttonElementb.style.backgroundColor = color;
-    buttonElement2.style.backgroundColor = color;
-    buttonElement2b.style.backgroundColor = color;
-  });
-  color3.addEventListener("input", () => {
-    const color = color3.value;
-    cardElement.style.backgroundColor = color;
-  });
-
-</script>
 </body>
 
 </html>
