@@ -206,12 +206,16 @@ input[type="submit"]:hover {
 }
 
 .dark-mode-buttons {
-    position: absolute;
-    right: 0px;
-    top: 0px;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
 }
 
+.dark-mode-buttons label {
+    margin-right: 0.5rem;
+}
 #dark-mode-button {
     width: 70px;
 }
