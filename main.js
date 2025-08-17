@@ -10,8 +10,13 @@ function handleDarkMode(target) {
     }
   }
 }
-document.addEventListener("click", (e) => {
-  handleDarkMode(e.target);
-});
+
+let eventTypes = ['click', 'touchend'];
+
+eventTypes.forEach((eventType) => {
+  document.addEventListener(eventType, (e) => {
+    handleDarkMode(e.target);
+  });
+})
 
 handleDarkMode(darkModeToggle)
