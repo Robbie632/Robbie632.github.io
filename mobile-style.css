@@ -55,4 +55,7 @@
         width: 200px;
         border-radius: 50%;
     }
+    .card-container {
+        gap: 1.5rem;
+    }
 }
