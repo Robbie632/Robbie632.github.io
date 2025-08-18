@@ -52,7 +52,7 @@ h2 {
 }
 
 h3 {
-    margin-bottom: calc(var(--above-spacer)/2);
+    margin-bottom: calc(var(--above-spacer)/3);
     margin-left: calc(var(--above-spacer)/2);
     font-size: 2rem;
 
@@ -151,6 +151,10 @@ nav>a:hover {
 } 
 .project {
         height: calc(var(--card-width)*0.65);
+        
+}
+.project:last-child{
+    margin-bottom: calc(var(--above-spacer)/3);
 }
 
 .center-block {
