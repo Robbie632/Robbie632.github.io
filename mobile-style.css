@@ -58,4 +58,8 @@
     .card-container {
         gap: 1.5rem;
     }
+
+    .project {
+        height: auto;
+}
 }

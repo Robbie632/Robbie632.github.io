@@ -146,8 +146,12 @@ nav>a:hover {
     padding: 2rem;
     box-shadow: var(--box-shadow);
 }
+.project > h4, .project > p, .project > a {
+    text-align: left;
+    width:100%
+} 
 .project {
-        height: calc(var(--card-width)*0.75);
+        height: calc(var(--card-width)*0.65);
 }
 
 .center-block {
