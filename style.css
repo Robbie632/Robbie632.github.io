@@ -83,8 +83,7 @@ header {
 }
 
 footer {
-    padding-top: 100px;
-    padding-bottom: 20px;
+    padding: 2rem 0;
     background-color: var(--color-1);
     margin-top: 100px;
 }
