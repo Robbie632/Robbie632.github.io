@@ -2,7 +2,7 @@ let bodyElement = document.body;
 let darkModeToggle = document.getElementById("dark-mode-button");
 
 let preferences = localStorage.getItem('preferences')
-let preferencesObject;
+let preferencesObject = null;
 
 if (preferences !== null) {
   preferencesObject = JSON.parse(preferences);
