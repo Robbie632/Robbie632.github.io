@@ -17,17 +17,20 @@ class TaxCalculator {
     this.annualSalary = Number.parseInt(annualSalary);
     this.additionalIncome = Number.parseInt(additionalIncome);
     this.taxBands = taxBands;
+    this.tradingAllowance = this.tradingAllowance;
   }
 
   calculateIncomeTax() {
-    let taxableAdditionalIncome = Math.max(this.additionalIncome - 1000, 0);
+    let taxableAdditionalIncome = Math.max(this.additionalIncome - this.tradingAllowance, 0);
+          this.messages.push("------------------")
+    this.messages.push(`<p>duducted trading allowance of £${Math.round(this.tradingAllowance)} from taxable income</p>`)
+    this.messages.push("------------------")
     let totalIncome = this.annualSalary + taxableAdditionalIncome;
     let taxRatio = taxableAdditionalIncome/this.annualSalary;
     
     let totalTax = 0;
 
     this.taxBands.forEach(({ name, lower, upper, rate }) => {
-      debugger;
       let amountOverLower = totalIncome - lower;
       let taxableAmountOver =
         amountOverLower < 0 ? 0 : Math.min(amountOverLower, upper - lower);
@@ -43,7 +46,7 @@ class TaxCalculator {
       this.messages.push("------------------")
       totalTax = totalTax + taxForband;
     });
-    debugger
+
     let details = {
         totalTax: totalTax,
         totalAdditionalIncomeTax: totalTax*taxRatio
@@ -57,19 +60,40 @@ class TaxCalculator {
   }
 }
 
+class MessageHandler {
+  constructor() {
+    this.messages = []
+  }
+
+  addToBlock() {
+    // implement here
+  }
+  render() {
+    // leave blank
+  } 
+}
+
+
+
 let annualSalaryInput = document.getElementById("annual-salary");
 let profitInput = document.getElementById("profit");
 let output = document.getElementById("calculation-output");
 let output2 = document.getElementById("tax-on-self-employed-output");
 let explanationOutput = document.getElementById("explanation-output");
-
+let taxTable = document.getElementById('tax-table');
 document.addEventListener("submit", (e) => {
+  taxTable.classList.replace('tax-table-hidden', 'tax-table')
+
   e.preventDefault();
 
   let annualSalary = annualSalaryInput.value;
   let additionalIncome = profitInput.value;
   let calculator = new TaxCalculator(annualSalary, additionalIncome);
   let {totalTax, totalAdditionalIncomeTax} = calculator.calculateIncomeTax();
+  let outputHeaders = document.getElementsByClassName('output-header');
+  for (const element of outputHeaders) {
+    element.style.display='block'
+  }
 
   output.innerText = Math.round(totalTax);
   output2.innerText = Math.round(totalAdditionalIncomeTax)

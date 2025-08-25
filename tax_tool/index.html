@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,11 @@
     <script defer type="module" src="./main.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>Tax calculator</h1>
-    <p>This tool is designed to be used by self-employed individuals in order to calculate the amount of income tax they need to pay on a years profit assuming they have a PAYE job and a self-employed job</p>
+    <h1>UK Tax calculator</h1>
+    <p>This tool is designed to be used by self-employed individuals who also have a PAYE job in order to calculate the
+        amount of income tax they need to pay on a years profit</p>
     <p>No data is sent to servers, all calculations are done in your browser</p>
     <form action="">
         <label for="annual-salary">Annual salary from main job</label>
@@ -21,10 +24,41 @@
         <input required type="number" name="profit" min="0" id="profit">
         <button type="submit">calculate</button>
     </form>
-    <div>Total tax to be paid: </div>
+    <h3 class="output-header">Total tax to be paid: </h3>
     <div class="main-metric" id="calculation-output"></div>
-    <div>Tax to be paid on self-employed work: </div>
+    <h3 class="output-header">Tax to be paid on self-employed work: </h3>
     <div class="main-metric" id="tax-on-self-employed-output"></div>
     <div id="explanation-output"></div>
+
+    <div id="tax-table" class="tax-table-hidden">
+        <h4>Tax Band</h4>
+        <h4>Rate</h4>
+        <h4>Amount to pay (main job)</h4>
+        <h4>Amount to pay (self-employed job)</h4>
+        <h4>Total amount to pay</h4>
+        <div>Personal Allowance</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>Basic Rate</div>
+        <div>0.2</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>Higher Rate</div>
+        <div>0.4</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>Additional Rate</div>
+        <div>0.45</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+    </div>
+
+
 </body>
+
 </html>

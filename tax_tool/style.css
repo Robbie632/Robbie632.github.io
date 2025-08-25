@@ -39,6 +39,7 @@ p {
   color: #666;
 }
 
+
 form {
   background: var(--card-background);
   padding: 2.5rem;
@@ -96,19 +97,7 @@ button[type="submit"]:active {
   transform: translateY(0);
 }
 
-div {
-  margin-top: 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-color);
-  width: 100%;
-  max-width: 500px;
 
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-
-  text-align: center;
-}
 
 p span {
   font-weight:bold;
@@ -133,14 +122,54 @@ p span {
   font-style: italic;
 }
 
+.output-header{
+  display: none;
+}
+
+.tax-table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  max-width: 1000px;;
+
+}
+.tax-table-hidden {
+  display: none;
+}
+.tax-table h4 {
+  margin: 0;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+.tax-table div {
+  border: 1px solid grey;
+  margin:0;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--text-color)
+
+}
+
+
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   h1 {
     font-size: 2rem;
   }
-
+  h4 {
+    font-size: 0.7rem;
+  }
   p {
     font-size: 1rem;
+  }
+
+  .tax-table div {
+    font-size: 0.6rem;
+  }
+  .tax-table h4 {
+    padding: 0.1rem;
   }
 
   form {
