@@ -132,9 +132,7 @@ p span {
   grid-template-rows: repeat(5, 1fr);
   max-width: 1000px;
 }
-.tax-table-hidden {
-  display: none;
-}
+
 .tax-table h4 {
   margin: 0;
   font-weight: bold;
@@ -164,11 +162,21 @@ p span {
 .hidden {
   display: none;
 }
-
+#show-workings-button {
+  text-align: center;
+}
+.collapsible-closed::after {
+  content: '   >';
+}
+.collapsible-open::after {
+  content:'    v';
+  transform: rotate(180deg);
+}
 #show-workings-button:hover {
   cursor: pointer;
-
 }
+
+
 
 /* Responsive adjustments */
 @media (max-width: 600px) {

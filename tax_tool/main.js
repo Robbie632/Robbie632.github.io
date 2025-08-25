@@ -54,9 +54,9 @@ class TaxCalculator {
     );
 
     this.messages.push(
-      `<p>duducted trading allowance of £${Math.round(
+      `deducted trading allowance of £${Math.round(
         this.tradingAllowance
-      )} from taxable income</p>`
+      )} from taxable income`
     );
 
     let totalIncome = this.annualSalary + taxableAdditionalIncome;
@@ -82,10 +82,13 @@ class TaxCalculator {
       cell.innerText  = processCashAmount(taxForband);
 
       this.messages.push(
-        `<p>paid ${Math.round(taxForband)} in tax in tax band <span>${name}</span> at rate ${rate}</p>`
+        `<p>paid ${Math.round(taxForband)} in tax in tax band <span>${name}</span> at rate ${rate}`
       );
-      this.messages.push(`<p>paid ${Math.round(additionalIncomeTax)} in tax on additional income </p>`)
-      this.messages.push(`<p>paid ${Math.round(annualSalaryTax)} in tax on annual salary</p>`)
+      this.messages.push(`lower and upper limit of band is ${lower} - ${upper}`)
+      this.messages.push(`amount to be taxed in band is ${taxableAmountOver}`)
+      this.messages.push(`split tax for band across annual and self-employed using ratio ${taxRatio}`)
+      this.messages.push(`paid ${Math.round(additionalIncomeTax)} in tax on additional income`)
+      this.messages.push(`paid ${Math.round(annualSalaryTax)} in tax on annual salary`)
       this.messages.push("------------------")
 
       totalTax = totalTax + taxForband;
@@ -107,16 +110,16 @@ class TaxCalculator {
 
 let annualSalaryInput = document.getElementById("annual-salary");
 let profitInput = document.getElementById("profit");
-let output = document.getElementById("calculation-output");
-let output2 = document.getElementById("tax-on-self-employed-output");
 let explanationOutput = document.getElementById("workings");
 let taxTable = document.getElementById("tax-table");
+let showWorkingsButton = document.getElementById('show-workings-button');
 let linearIndex;
 
 
 
 document.addEventListener("submit", (e) => {
-  taxTable.classList.replace("tax-table-hidden", "tax-table");
+  taxTable.classList.remove("hidden");
+  showWorkingsButton.classList.remove('hidden');
 
   e.preventDefault();
 
@@ -124,13 +127,11 @@ document.addEventListener("submit", (e) => {
   let additionalIncome = profitInput.value;
   let calculator = new TaxCalculator(annualSalary, additionalIncome);
   let { totalTax, totalAdditionalIncomeTax } = calculator.calculateIncomeTax();
-  let outputHeaders = document.getElementsByClassName("output-header");
-  for (const element of outputHeaders) {
-    element.style.display = "block";
-  }
+  let outputHeading = document.getElementById("output-heading");
 
-  output.innerText = Math.round(totalTax);
-  output2.innerText = Math.round(totalAdditionalIncomeTax);
+  outputHeading.classList.remove("hidden");
+  
+
   explanationOutput.innerHTML = "";
 
   calculator.getMessages().forEach((element) => {
@@ -138,11 +139,16 @@ document.addEventListener("submit", (e) => {
     messageOutput.innerHTML = element;
     explanationOutput.appendChild(messageOutput);
   });
-  output.scrollIntoView();
+  outputHeading.scrollIntoView({behavior:"smooth"});
 });
 
 document.addEventListener('click', (e) => {
   if (e.target.id=='show-workings-button') {
     explanationOutput.classList.toggle('hidden')
+    if (e.target.classList.contains('collapsible') ) {
+      e.target.classList.toggle('collapsible-closed')
+      e.target.classList.toggle('collapsible-open')
+    }
+    explanationOutput.scrollIntoView({behavior:"smooth"})
   }
 })

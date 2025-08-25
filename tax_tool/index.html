@@ -24,20 +24,18 @@
         <input required type="number" name="profit" min="0" id="profit">
         <button type="submit">calculate</button>
     </form>
-    <h3 class="output-header">Total tax to be paid: </h3>
-    <div class="main-metric" id="calculation-output"></div>
-    <h3 class="output-header">Tax to be paid on self-employed work: </h3>
-    <div class="main-metric" id="tax-on-self-employed-output"></div>
+    <h3 class="output-heading hidden" id="output-heading">Tax Breakdown</h3>
+
     <div id="explanation-output"></div>
 
-    <div id="tax-table" class="tax-table">
+    <div id="tax-table" class="tax-table hidden">
         <h4>Tax Band</h4>
         <h4>Rate</h4>
         <h4>Amount to pay (main job)</h4>
         <h4>Amount to pay (self-employed job)</h4>
         <h4>Total amount to pay</h4>
         <div>Personal Allowance</div>
-        <div>-</div>
+        <div>0%</div>
         <div>-</div>
         <div>-</div>
         <div>-</div>
@@ -59,7 +57,7 @@
     </div>
 
     <div id="show-workings-container">
-        <div id='show-workings-button'>  show workings</div>
+        <div class="collapsible collapsible-closed hidden" id='show-workings-button'>  show workings</div>
         <div id = 'workings' class="hidden">my workings</div>
     </div>
 
