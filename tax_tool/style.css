@@ -74,7 +74,7 @@ input[type="number"]:focus {
   box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
 }
 
-button[type="submit"] {
+button {
   background-color: var(--primary-color);
   color: #fff;
   border: none;
@@ -164,6 +164,10 @@ p span {
 }
 #show-workings-button {
   text-align: center;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius:12px;
+  margin:50px 0;
 }
 .collapsible-closed::after {
   content: '   >';
@@ -174,6 +178,10 @@ p span {
 }
 #show-workings-button:hover {
   cursor: pointer;
+}
+#show-workings-container {
+  margin-bottom:400px;
+  text-align: center;
 }
 
 
