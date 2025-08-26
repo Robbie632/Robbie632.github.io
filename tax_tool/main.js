@@ -54,10 +54,12 @@ class TaxCalculator {
     );
 
     this.messages.push(
-      `deducted trading allowance of £${Math.round(
+      `Deducted trading allowance of £${Math.round(
         this.tradingAllowance
-      )} from taxable income`
+      )} from taxable income.`
     );
+    this.messages.push("------------------")
+
 
     let totalIncome = this.annualSalary + taxableAdditionalIncome;
     let taxRatio = taxableAdditionalIncome / this.annualSalary;
@@ -81,14 +83,15 @@ class TaxCalculator {
       cell = getCell(index+1, 'total');
       cell.innerText  = processCashAmount(taxForband);
 
+      this.messages.push(`<h3 class='h3-workings'>Tax band: ${name} <span><p class='subtitle'>£${lower} - £${upper}</p></span></h3>`)
+
       this.messages.push(
-        `<p>paid ${Math.round(taxForband)} in tax in tax band <span>${name}</span> at rate ${rate}`
+        `Total tax to be paid is £${Math.round(taxForband)} at rate ${rate}`
       );
-      this.messages.push(`lower and upper limit of band is ${lower} - ${upper}`)
-      this.messages.push(`amount to be taxed in band is ${taxableAmountOver}`)
-      this.messages.push(`split tax for band across annual and self-employed using ratio ${taxRatio}`)
-      this.messages.push(`paid ${Math.round(additionalIncomeTax)} in tax on additional income`)
-      this.messages.push(`paid ${Math.round(annualSalaryTax)} in tax on annual salary`)
+      this.messages.push(`Amount to be taxed in band is £${taxableAmountOver}.`)
+      this.messages.push(`Split tax for band across annual and self-employed using ratio ${taxRatio}.`)
+      this.messages.push(`£${Math.round(additionalIncomeTax)} to be paid in tax on additional income.`)
+      this.messages.push(`£${Math.round(annualSalaryTax)} to be paid in tax on annual salary.`)
       this.messages.push("------------------")
 
       totalTax = totalTax + taxForband;

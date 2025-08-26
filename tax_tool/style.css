@@ -33,12 +33,20 @@ h1 {
 
 p {
   max-width: 600px;
-  text-align: center;
+  text-align: left;
   margin-bottom: 2rem;
   font-size: 1.1rem;
   color: #666;
 }
 
+.subtitle{
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 0;
+}
+.h3-workings{
+  margin-bottom:0;
+}
 
 form {
   background: var(--card-background);
