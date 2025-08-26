@@ -19,9 +19,9 @@
     <p>No data is sent to servers, all calculations are done in your browser</p>
     <form action="">
         <label for="annual-salary">Annual salary from main job</label>
-        <input required type="number" id="annual-salary" min="0" value="12344"></input>
+        <input required type="number" id="annual-salary" min="0"></input>
         <label for="profit">Profit from self-employed work</label>
-        <input required type="number" name="profit" min="0" id="profit" value="232">
+        <input required type="number" name="profit" min="0" id="profit">
         <button type="submit">calculate</button>
     </form>
     <h3 class="output-heading hidden" id="output-heading">Tax Breakdown</h3>
@@ -57,7 +57,7 @@
     </div>
 
     <div id="show-workings-container">
-        <button class="collapsible collapsible-closed hidden" id='show-workings-button'> show workings</button>
+        <button class="collapsible collapsible-closed hidden" id='show-workings-button'> show details</button>
         <div id = 'workings' class="hidden">my workings</div>
     </div>
 
