@@ -38,7 +38,7 @@ class TaxCalculator {
       { name: "personal allowance", lower: 0, upper: 12570, rate: 0 },
       { name: "basic rate", lower: 12571, upper: 50270, rate: 0.2 },
       { name: "higher rate", lower: 50271, upper: 125140, rate: 0.4 },
-      { name: "additional rate", lower: 125141, upper: 10000000, rate: 0.45 },
+      { name: "additional rate", lower: 125141, upper: Infinity, rate: 0.45 },
     ]
   ) {
     this.annualSalary = Number.parseInt(annualSalary);
@@ -83,15 +83,18 @@ class TaxCalculator {
       cell = getCell(index+1, 'total');
       cell.innerText  = processCashAmount(taxForband);
 
-      this.messages.push(`<h3 class='h3-workings'>Tax band: ${name} <span><p class='subtitle'>£${lower} - £${upper}</p></span></h3>`)
+      let rangeMessage = upper !=Infinity ? `£${lower} - £${upper}` : `> £${lower}`;
+      this.messages.push(`<h3 class='h3-workings'>Tax band: ${name} <span><p class='subtitle'>${rangeMessage}</p></span></h3>`)
 
       this.messages.push(
         `Total tax to be paid is £${Math.round(taxForband)} at rate ${rate}`
       );
-      this.messages.push(`Amount to be taxed in band is £${taxableAmountOver}.`)
-      this.messages.push(`Split tax for band across annual and self-employed using ratio ${taxRatio}.`)
-      this.messages.push(`£${Math.round(additionalIncomeTax)} to be paid in tax on additional income.`)
-      this.messages.push(`£${Math.round(annualSalaryTax)} to be paid in tax on annual salary.`)
+      if (taxForband !==0) {
+        this.messages.push(`Amount to be taxed in band is £${taxableAmountOver}.`)
+        this.messages.push(`Split tax for band across annual and self-employed using ratio ${taxRatio.toPrecision(2)}.`)
+        this.messages.push(`£${Math.round(additionalIncomeTax)} to be paid in tax on additional income.`)
+        this.messages.push(`£${Math.round(annualSalaryTax)} to be paid in tax on annual salary.`)
+      }
       this.messages.push("------------------")
 
       totalTax = totalTax + taxForband;
