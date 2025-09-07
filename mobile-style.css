@@ -3,6 +3,9 @@
 
         --margin-width: 10px;
     }
+    body {
+        font-size: 1rem;
+    }
 
     nav {
         flex-direction: column;
@@ -35,9 +38,7 @@
         font-size: 1.5rem;
     }
 
-    p {
-        font-size: 1rem;
-    }
+ 
 
     header nav,
     footer nav {
