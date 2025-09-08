@@ -11,8 +11,9 @@
     --input-background: rgb(233, 233, 239);
     --button-font-color: white;
     --card-width: 500px;
-    --margin-width: 200px;
+    --margin-width: 15%;
     --above-spacer: 5rem;
+    --paragraph-spacer: 2.5rem;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
@@ -100,7 +101,9 @@ nav {
     display: flex;
     flex-direction: row;
 }
-
+p {
+    margin-bottom: var(--paragraph-spacer);
+}
 header nav {
     justify-content: end;
     gap: 2rem;
@@ -205,7 +208,7 @@ input[type="submit"] {
     color: var(--button-font-color);
     border:none;
     border-radius: 10px;
-    padding: 0.5rem;
+    padding: 0.7rem;
     display:inline;
     margin-top: 2rem;
 
@@ -244,4 +247,11 @@ input[type="range"]::-webkit-slider-runnable-track {
     height:300px;
     width:300px;
     border-radius: 50%;
+}
+
+.contact-feedback-hidden {
+    display:none;
+}
+.contact-feedback-show {
+    display:block;
 }
