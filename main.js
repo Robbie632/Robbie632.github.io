@@ -33,7 +33,7 @@ if (preferencesObject !== null) {
 }
 
 let contactForm = document.getElementById("contact-form");
-let contactSection = document.getElementById("contact");
+let form = document.getElementsByTagName("form")[0];
 let contactFeedback = document.getElementsByClassName(
   "contact-feedback-hidden"
 );
@@ -41,11 +41,11 @@ let contactFeedback = document.getElementsByClassName(
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  contactSection.style.display = "none";
-  // problem forEachnot recognise
-  contactFeedback.forEach((element) => {
-    debugger
-    element.style.classList.replace(
+  form.style.display = "none";
+
+  Array.from(contactFeedback).forEach((element) => {
+
+    element.classList.replace(
       "contact-feedback-hidden",
       "contact-feedback-show"
     );
