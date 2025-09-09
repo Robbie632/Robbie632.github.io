@@ -44,7 +44,6 @@ contactForm.addEventListener("submit", (e) => {
   form.style.display = "none";
 
   Array.from(contactFeedback).forEach((element) => {
-
     element.classList.replace(
       "contact-feedback-hidden",
       "contact-feedback-show"
