@@ -75,7 +75,9 @@ a {
     color: var(--link-color);
 }
 
-
+span {
+    color:var(--link-color);
+}
 
 header {
     background-color: var(--color-1);
