@@ -10,6 +10,9 @@
     <title>Robert Morse</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mobile-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
     <script defer src="./main.js"></script>
 </head>
 
@@ -20,24 +23,32 @@
             <input id="dark-mode-button" value="0" type="range" min="0" max=1>
         </div>
         <img class="profile-image" src="./profile.jpg" alt="">
-        <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a></nav>
+        <nav><a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#tutoring">Tutoring</a>
+                <a href="#contact">Contact</a>
+            </nav>
     </header>
 
     <main>
-        <h1>Robert Morse</h1>
+        <h1>Robert Morse<span>.</span></h1>
         <p>
-            👋 Hi, my name is Robbie and I am a software developer at <a href="https://mayden.co.uk" target="_blank">Mayden</a> where I
-            work on building and improving <a href="https://iaptus.co.uk" target="_blank">Iaptus</a>, an Electronic Patient Record
+            👋 Hi, my name is Robbie and I am a software developer at <a href="https://mayden.co.uk"
+                target="_blank">Mayden</a> where I
+            work on building and improving <a href="https://iaptus.co.uk" target="_blank">Iaptus</a>, an Electronic
+            Patient Record
             system used by mental health services.
-
         </p>
         <div class="section" id="about">
             <h2>About</h2>
             <p>
-                I am currently a full stack software engineer working in a scrum team where I work with PHP and JavaScript, both with and without frameworks. Prior to this I worked for 7 years
+                I am currently a full stack software engineer in a scrum team where I work with PHP and
+                JavaScript, both with and without frameworks. Prior to this I worked for seven years
                 in Data Science and Machine Learning. In my spare time I like watching films, being in
                 nature, climbing, eating cakes and drinking coffee. I live in Bristol.
             </p>
+            <p>I hold two masters, a MSci in Biochemistry from the University of Cambridge, and most recently a MSc in Computer Science from the University of Bath. I love understanding how systems work, especially in software.</p>
         </div>
         <div class="section" id="skills">
             <h2>Skills</h2>
@@ -48,7 +59,11 @@
                         <h4>PHP</h4>
                     </div>
                     <div class="skill">
-                        <h4>Laravel, Slim</h4>
+                        <h4>Laravel</h4>
+                        
+                    </div>
+                    <div class="skill">
+                        <h4>Slim</h4>
                     </div>
                     <div class="skill">
                         <h4>JavaScript</h4>
@@ -71,19 +86,7 @@
         </div>
         <div class="section" id="projects">
             <h2>Projects</h2>
-            <h3>Front-End</h3>
-            <div class="card-container">
-                <div class="project">
-                    <h4>Website Color Picker</h4>
-                    <p>A tool to help pick colors for a website</p>
-                    <a href="/website_tool/index.html" target="_blank"> open project</a>
-                </div>
-                <div class="project">
-                    <h4>Tax Calculator</h4>
-                    <p>A tool for calculating tax</p>
-                    <a href="/tax_tool/index.html" target="_blank">open project</a>
-                </div>
-            </div>
+            Below is a selection of my personal projects, click on the open project buttons to see them in action!
             <h3>Full-Stack</h3>
             <div class="card-container">
                 <div class="project">
@@ -98,30 +101,166 @@
 
                 </div>
             </div>
+            <h3>Front-End</h3>
+            <div class="card-container">
+                <div class="project">
+                    <h4>Website Color Picker</h4>
+                    <p>A tool to help pick colors for a website</p>
+                    <a href="/website_tool/index.html" target="_blank"> open project</a>
+                </div>
+                <div class="project">
+                    <h4>Tax Calculator</h4>
+                    <p>A tool for calculating tax</p>
+                    <a href="/tax_tool/index.html" target="_blank">open project</a>
+                </div>
+            </div>
+
         </div>
-        <!-- <div class="section" id="contact">
+        <div class="section" id="tutoring">
+            <h2>Tutoring</h2>
+
+            <p>
+                I have a passion for teaching, so alongside my software developer job, I offer tutoring in Web Development on weekend mornings.
+            </p>
+
+            <h3>My tutoring style</h3>
+
+            <p>
+                As a tutor, I bring a wealth of practical experience and a strong academic background to our sessions. I
+                believe in creating a supportive and encouraging environment where you feel comfortable asking questions
+                and learning at your own pace.
+            </p>
+            <p>
+
+                I am currently a Software Developer for a health tech company, where I apply my skills to build
+                innovative solutions for mental health services. This role, the latest within my seven years of
+                professional software development experience, provides me with a deep understanding of modern
+                technologies and best practices we'll be exploring together.
+            </p>
+            <p>
+                I hold Masters degrees from both the University of Cambridge and the University of Bath. My MSc from
+                the University of Bath is specifically in Computer Science, providing me with a robust theoretical
+                foundation that complements my practical expertise.
+            </p>
+            <p>
+                I have experience tutoring programming to both adults and children, the latter of which I tought via the
+                educational charity; Code Club.
+            </p>
+            <p>
+                I understand that learning something new can sometimes feel daunting, which is why I pride myself on
+                being a patient tutor who tailors the speed and direction of the sessions to the student. I really
+                looking forward to passing on my skills and helping you to fulfill your coding potential!
+            </p>
+            <h3>About the lessons</h3>
+            <p>
+
+
+                There are a multitude of tools to learn web development available today, including online bootcamps and
+                even
+                the use of AI to guide learning. These are great ways to learn, but you may feel that something is
+                missing
+                before you are ready for a web development job, that is where I can help.
+                I am able to teach and offer guidance to help prepare you for that dream job. I also offer lessons to
+                those
+                who are starting from scratch.
+            </p>
+            <p>
+
+                My approach to tutoring is highly practical and project-based. I believe the best way to learn is by
+                doing,
+                so our sessions will be focused on working together on personalized projects that genuinely interest
+                you.
+                Whether you're passionate about photography, gaming, cooking, or anything else, we'll tailor our
+                projects to
+                your specific interests.
+
+            </p>
+            <p>
+
+                I offer lessons for the following languages/frameworks in the context of web development:
+
+            </p>
+            <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>PHP</li>
+                <li>Laravel</li>
+                <li>HTML/CSS</li>
+            </ul>
+            <p>
+                However, these languages are usually learnt in tandem as we build a project together.
+            </p>
+
+            <p>
+                My teaching methodology centers around active learning and collaboration. We won't just be going through
+                theory; we'll be building and creating together. I'll guide you through the necessary concepts and
+                techniques as we work on your chosen project, providing clear explanations and hands-on support every
+                step
+                of the way. A key goal is that by the end of our time together, we will have created your very own
+                personalized website. This tangible outcome will not only be something you can be proud of but will also
+                demonstrate the practical skills you've acquired.
+
+            </p>
+            <h3>Lesson Structure</h3>
+            <p>
+                A typical lesson will be 1 hour long and conducted online for your convenience. I also offer in-person
+                lessons based in Bristol.
+            </p>
+            <p>I offer a free initial 30 minute session in order to discuss your goals.</p> 
+            <p>
+
+                No prior experience is required whatsoever. If you're curious about learning new skills and want a
+                hands-on
+                approach, then my lessons are for you.
+            </p>
+            <p>
+
+                I welcome students of all ages who are eager to learn through creating and building.
+
+
+
+
+            </p>
+                    <p>If you are interested in being tutored then you can email me at <span>rwcmorse@gmail.com</span> or can fill out the form below if you prefer. I am also on <a
+                    href="https://www.superprof.co.uk/web-development-javascript-react-php-html-css-professional-software-developer-with-seven-years-industry-experience.html">Superprof</a>
+                if you prefer to do sessions through their platform.</p>
+
+
+
+        </div>
+        <div class="section" id="contact">
             <h2>Contact</h2>
+            <p>Feel free to reach out if you are interested in tutoring or just want to connect!</p>
             <div class="center-block">
-                <form action="">
-                    <div class="label-input">
-                        <label for="">Name</label>
-                        <input type="text">
+                <form id='contact-form' action="https://formsubmit.co/rwcmorse@gmail.com" method="POST">
+                    <div class="form">
+
+                        <div class="label-input">
+                            <label for="name">Name*</label>
+                            <input id='name' type="text" name="name">
+                        </div>
+                        <div class="label-input">
+                            <label for="email">Email Address*</label>
+                            <input id="email" type="email" name="email">
+                        </div>
+                        <div class="label-input">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message"></textarea>
+                        </div>
                     </div>
-                    <div class="label-input">
-                        <label for="">Email Address</label>
-                        <input type="email">
-                    </div>
-                    <div class="label-input">
-                        <label for="">Message</label>
-                        <textarea></textarea>
-                    </div>
-                    <input type="submit" value="Submit"></input>
+                    <input type="submit" value="SUBMIT"></input>
                 </form>
             </div>
-        </div> -->
+        </div>
+        <div class="contact-feedback-hidden">
+            Thanks for your message! I will be in touch shortly.
+        </div>
     </main>
     <footer>
-        <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a></nav>
+        <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+            <a href="#tutoring">Tutoring</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </footer>
 </body>
 
