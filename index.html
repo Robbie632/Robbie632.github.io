@@ -24,11 +24,11 @@
         </div>
         <img class="profile-image" src="./profile.jpg" alt="">
         <nav><a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#tutoring">Tutoring</a>
-            <a href="#contact">Contact</a>
-        </nav>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#tutoring">Tutoring</a>
+                <a href="#contact">Contact</a>
+            </nav>
     </header>
 
     <main>
@@ -230,21 +230,22 @@
         </div>
         <div class="section" id="contact">
             <h2>Contact</h2>
+            <p>Feel free to reach out if you are interested in tutoring or just want to connect!</p>
             <div class="center-block">
-                <form id='contact-form'action="">
+                <form id='contact-form' action="https://formsubmit.co/rwcmorse@gmail.com" method="POST">
                     <div class="form">
 
                         <div class="label-input">
                             <label for="name">Name*</label>
-                            <input id='name' type="text">
+                            <input id='name' type="text" name="name">
                         </div>
                         <div class="label-input">
                             <label for="email">Email Address*</label>
-                            <input id="email" type="email">
+                            <input id="email" type="email" name="email">
                         </div>
                         <div class="label-input">
                             <label for="message">Message</label>
-                            <textarea id="message"></textarea>
+                            <textarea name="message" id="message"></textarea>
                         </div>
                     </div>
                     <input type="submit" value="SUBMIT"></input>
