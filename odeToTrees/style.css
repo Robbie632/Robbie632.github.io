@@ -5,17 +5,19 @@
     --margin: 200px;
 }
 body {
-    font-family: 'Metamorphous', serif;
+    font-family: 'GFS Neohellenic';
     color: var(--font-color);
     background-color: var(--bg-color-1);
     margin: 0 var(--margin) 0 var(--margin);
-    font-size: 1.5rem;;
+    font-size: 1.7rem;;
 }
 .scientific-name {
     font-style: italic;
+    text-align: center;
 }
 h1 {
     font-size: var(--h1-font-size);
+    font-family: 'Metamorphous', serif;
 }
 h2 {
     font-size: 1.5rem;
@@ -26,8 +28,25 @@ h2 {
     display: inline-block;
     padding: 1rem;
     line-height: 0.2rem;
-    margin-bottom:100px;
+    margin:0px 0 50px 0;
 
+}
+.logo {
+    max-width: 100%;
+    height:auto;
+    transform: rotate(90deg);
+}
+.logo-container {
+    width:400px;
+    text-align: right;
+    margin-bottom: -200px;
+    margin-right: -100px;;
+}
+.a {
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
 }
 .head{
     display: flex;
@@ -40,23 +59,44 @@ h2 {
     flex-direction: column;
     align-items: center;
     display:inline-block;
+    flex: 1
 }
 .img-desc {
     display: flex;
     flex-direction: row;
     gap:2rem;
 }
+.description {
+    flex:1;
+}
+
 .image-container img {
-    height: 100%;
+max-width: 100%;
+height:auto;
 }
 .image-ref {
     font-style: italic;
-    font-size: 0.8rem;;
+    font-size: 1rem;;
 }
 a {
     color:var(--font-color)
 }
 
-.description {
-    flex:1  
+
+.first-letter {
+    font-size: 5.8rem;
+    float:left;
+    margin-right: 2rem;
+    line-height: 1;
+    margin-bottom: -3rem;
+    font-family: "Corinthia";
+}
+
+.quote {
+    padding:0 2.8rem 0 2.8rem;
+    line-height: 3.8rem;
+    font-style: italic;
+    font-weight: 60;
+    font-size: 3.5rem;;
+    text-align: center;
 }
