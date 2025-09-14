@@ -1,0 +1,18 @@
+@media (min-width:1000px) {
+    :root {
+        --margin: 50px;
+        font-size: 1.7rem;
+        --h1-font-size: 2.5rem;
+    }
+    .img-desc {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .logo-container {
+        width: 150px;
+    }
+    .title-container {
+        margin: 0px 0 50px 0;
+    }
+}
