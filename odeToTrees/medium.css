@@ -1,0 +1,16 @@
+@media (max-width:1024px) {
+    body {
+        --margin: 50px;
+    }
+
+    .head {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+    .title-container {
+        margin:0;
+    }
+}

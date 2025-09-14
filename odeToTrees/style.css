@@ -13,7 +13,7 @@ body {
 }
 .scientific-name {
     font-style: italic;
-    text-align: center;
+    text-align: start;
 }
 h1 {
     font-size: var(--h1-font-size);
@@ -30,6 +30,11 @@ h2 {
     line-height: 0.2rem;
     margin:0px 0 50px 0;
 
+    text-align: center;
+
+}
+.spacer {
+    flex:1;
 }
 .logo {
     max-width: 100%;
@@ -37,21 +42,22 @@ h2 {
     transform: rotate(90deg);
 }
 .logo-container {
-    width:400px;
+    width:150px;
     text-align: right;
-    margin-bottom: -200px;
-    margin-right: -100px;;
 }
 .a {
-    width:100%;
     display:flex;
     flex-direction: row;
     justify-content: end;
+    flex:1;
 }
 .head{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-top: 50px;
+    
 }
 .image-container {
     height:600px;
@@ -59,7 +65,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     display:inline-block;
-    flex: 1
+    flex: 1;
 }
 .img-desc {
     display: flex;

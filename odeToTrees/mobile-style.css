@@ -10,5 +10,9 @@
         flex-direction: column;
         gap: 2rem;
     }
+    .logo-container {
+    width:100px;
+
+}
 
 }
