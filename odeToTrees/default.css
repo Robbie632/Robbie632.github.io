@@ -162,3 +162,7 @@ a {
     flex-direction: row;
     gap:1rem;
 }
+.intro {
+    text-align: center;
+    width:100%
+}
