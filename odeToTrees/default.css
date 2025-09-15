@@ -84,6 +84,10 @@ li img {
     display:none;
     transform:scalex(-1);
 }
+.logo-left-home {
+    display:none;
+
+}
 .a {
     display:flex;
     flex-direction: row;
