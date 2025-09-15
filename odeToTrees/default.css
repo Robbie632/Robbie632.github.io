@@ -16,7 +16,6 @@ body {
     text-align: start;
     line-height: 1rem;
     font-size: calc(var(--h1-font-size)*0.55);
-    color: rgb(200, 70, 70);
 }
 h1 {
     font-size: var(--h1-font-size);
@@ -125,7 +124,7 @@ height:auto;
 }
 .image-ref {
     font-style: italic;
-    font-size: 1rem;;
+    font-size: 0.8rem;;
 }
 a {
     color:var(--font-color)
@@ -142,7 +141,7 @@ a {
 
 .quote {
     padding:0 2.8rem 0 2.8rem;
-    line-height: 2.5rem;
+    line-height: 2rem;
     font-style: italic;
     font-weight: 30;
     font-size: 2rem;;
@@ -154,4 +153,12 @@ a {
     margin: auto;
     margin-top:50px;
     padding:50px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.contents li {
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
 }
