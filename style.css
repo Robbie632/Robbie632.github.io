@@ -157,7 +157,7 @@ nav>a:hover {
     width:100%
 } 
 .project {
-        height: calc(var(--card-width)*0.65);
+        height: calc(var(--card-width)*0.85);
         
 }
 .project:last-child{
