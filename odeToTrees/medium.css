@@ -13,7 +13,12 @@
         align-items: start;
         margin-top: 50px;
     }
+
     .logo-left {
-    display:block;
-}
+        display: block;
+    }
+
+    .logo-left-home {
+        display: block;
+    }
 }
