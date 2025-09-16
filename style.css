@@ -70,10 +70,25 @@ h3 {
 
 }
 
+
 h4 {
     margin-bottom: 0;
     margin-top: 0;
     font-size: 1.5rem;
+}
+
+.tutor-rates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: var(--paragraph-spacer);
+
+}
+.tutor-rates div {
+    border-bottom: 1px solid grey;
+    padding:0.5rem;
+}
+.table-heading {
+    font-weight: bold;
 }
 
 
@@ -81,7 +96,7 @@ a {
     color: var(--link-color);
 }
 
-span {
+.highlight {
     color:var(--link-color);
 }
 
@@ -115,6 +130,17 @@ nav {
 p {
     margin-bottom: var(--paragraph-spacer);
 }
+li {
+
+    margin-bottom: var(--paragraph-spacer);
+}
+.tutoring-subjects li {
+    margin-bottom: 10px;;
+}
+li:last-child {
+    margin-bottom: calc(1.5*var(--paragraph-spacer));
+}
+
 header nav {
     justify-content: end;
     gap: 2rem;
@@ -174,6 +200,14 @@ nav>a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.date {
+    margin-bottom: 0;
+    font-style: italic;
+}
+.place {
+    font-weight:lighter;
+    
 }
 
 .form {
