@@ -55,6 +55,12 @@ h2 {
     margin-bottom: calc(var(--above-spacer)/2);
     margin-top: calc(var(--above-spacer));
     font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+h2 > .underline {
+    width:12rem;
+
 }
 
 h3 {
